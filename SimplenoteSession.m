@@ -38,6 +38,7 @@
 
 NSString *SimplenoteServiceName = @"SN";
 NSString *SimplenoteSeparatorKey = @"SepStr";
+NSString *SimplenoteURL = @"https://auth.simperium.com/1/subordinates-displays-70e%@%@";
 #define kSimplenoteSessionIndexBatchSize 100
 
 // Set in SimperiumConfig.h
@@ -66,7 +67,7 @@ static void SNReachabilityCallback(SCNetworkReachabilityRef	target, SCNetworkCon
 	//path example: "/authorize"
 	
 	NSString *queryStr = params ? [NSString stringWithFormat:@"?%@", [params URLEncodedString]] : @"";
-	return [NSURL URLWithString:[NSString stringWithFormat:@"https://auth.simperium.com/1/chalk-bump-f49%@%@", path, queryStr]];
+	return [NSURL URLWithString:[NSString stringWithFormat:SimplenoteURL, path, queryStr]];
 }
 
 + (NSURL*)simperiumURLWithPath:(NSString*)path parameters:(NSDictionary*)params {
@@ -74,7 +75,7 @@ static void SNReachabilityCallback(SCNetworkReachabilityRef	target, SCNetworkCon
 	//path example: "/Note/index"
 
 	NSString *queryStr = params ? [NSString stringWithFormat:@"?%@", [params URLEncodedString]] : @"";
-    return [NSURL URLWithString:[NSString stringWithFormat:@"https://api.simperium.com/1/chalk-bump-f49%@%@", path, queryStr]];
+    return [NSURL URLWithString:[NSString stringWithFormat:SimplenoteURL, path, queryStr]];
 }
 
 #if 0
