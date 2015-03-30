@@ -29,6 +29,7 @@
 *.xcworkspace
 *.xcuserdatad
 *.xcuserstate
+SimperiumConfig.h
 
 # OS generated files #
 ######################
