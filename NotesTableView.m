@@ -64,7 +64,7 @@ static void _CopyItemWithSelectorFromMenu(NSMenu *destMenu, NSMenu *sourceMenu, 
 		headerView = [[HeaderViewWithMenu alloc] init];
 		[headerView setTableView:self];
 		[headerView setFrame:[[self headerView] frame]];
-		//	cornerView = [[self cornerView] retain];	
+		//	cornerView = [[self cornerView] retain];
 		[self setCornerView:nil];	
 		//cornerView =[[[NotesTableCornerView alloc] initWithFrame:[[self cornerView] bounds]] retain];
 		NSArray *columnsToDisplay = [globalPrefs visibleTableColumns];
@@ -273,7 +273,8 @@ static void _CopyItemWithSelectorFromMenu(NSMenu *destMenu, NSMenu *sourceMenu, 
 - (void)_configureAttributesForCurrentLayout {
 	BOOL horiz = [globalPrefs horizontalLayout];
     
-    [self setUsesAlternatingRowBackgroundColors:[globalPrefs alternatingRows]];
+//    [self setUsesAlternatingRowBackgroundColors:[globalPrefs alternatingRows]];
+    [self setUsesAlternatingRowBackgroundColors:NO];
     [self updateGrid];
 	
 	NoteAttributeColumn *col = [self noteAttributeColumnForIdentifier:NoteTitleColumnString];
