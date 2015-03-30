@@ -51,11 +51,6 @@ Italian.lproj/*.nvhelp
 French.lproj/*.nvhelp
 *.pbxproj
 *.xcscheme
-<<<<<<< HEAD
-=======
-
->>>>>>> another gitignore
-SimperiumConfig.h
 
 *.pbxproj
 nvalt.taskpaper
