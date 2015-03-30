@@ -193,7 +193,7 @@ typedef struct _NoteCatalogEntry {
 
 - (void)dealloc;
 
-#pragma mark nvALT stuff
+#pragma mark Torque stuff
 - (NSString *)createCachesFolderString;
 
 @end

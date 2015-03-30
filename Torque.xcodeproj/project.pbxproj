@@ -123,7 +123,7 @@
 		21F459AD0A92E01D00FB6FFE /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F4599B0A92E01C00FB6FFE /* Carbon.framework */; };
 		21FF94F30B5AD22800DB6A2F /* ExporterManager.nib in Resources */ = {isa = PBXBuildFile; fileRef = 21FF94ED0B5AD22800DB6A2F /* ExporterManager.nib */; };
 		21FF94F70B5AD23B00DB6A2F /* ExporterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF94F50B5AD23B00DB6A2F /* ExporterManager.m */; };
-		57F27F7B11973A7F00C63ACF /* Notation.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 57F27F7A11973A7F00C63ACF /* Notation.sdef */; };
+		57F27F7B11973A7F00C63ACF /* Torque.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 57F27F7A11973A7F00C63ACF /* Torque.sdef */; };
 		57F27FB91197407400C63ACF /* SearchCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F27FB81197407400C63ACF /* SearchCommand.m */; };
 		5C177AE7141EF95200BC0C0A /* ETClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C177AE6141EF95200BC0C0A /* ETClipView.m */; };
 		5C1830CA132EA675005E2210 /* MarkupPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1830CC132EA675005E2210 /* MarkupPreview.xib */; };
@@ -569,7 +569,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Notation_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notation_Prefix.pch; sourceTree = "<group>"; };
-		57F27F7A11973A7F00C63ACF /* Notation.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Notation.sdef; sourceTree = "<group>"; };
+		57F27F7A11973A7F00C63ACF /* Torque.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Torque.sdef; sourceTree = "<group>"; };
 		57F27FB71197407400C63ACF /* SearchCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCommand.h; sourceTree = "<group>"; };
 		57F27FB81197407400C63ACF /* SearchCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCommand.m; sourceTree = "<group>"; };
 		5C0C545A13A54E560008BC90 /* it */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = it; path = it.lproj/DeletionManager.nib; sourceTree = "<group>"; };
@@ -779,7 +779,7 @@
 		5CFF810713A52EE2008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5CFF810913A536F7008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/Preferences.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* nvALT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvALT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Torque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Torque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
 		9335C40C148EC7AC009CE623 /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
 		934C3FAE14FDA069000D14BA /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
@@ -972,7 +972,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* nvALT.app */,
+				8D1107320486CEB800E47090 /* Torque.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1271,7 +1271,7 @@
 				21395BA90B7FDB5E007BCFAA /* Supporting Files */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				57F27F7A11973A7F00C63ACF /* Notation.sdef */,
+				57F27F7A11973A7F00C63ACF /* Torque.sdef */,
 			);
 			name = Notation;
 			sourceTree = "<group>";
@@ -1434,9 +1434,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Notation */ = {
+		8D1107260486CEB800E47090 /* Torque */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 212B842309780B5000F3597F /* Build configuration list for PBXNativeTarget "Notation" */;
+			buildConfigurationList = 212B842309780B5000F3597F /* Build configuration list for PBXNativeTarget "Torque" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -1448,10 +1448,10 @@
 			);
 			dependencies = (
 			);
-			name = Notation;
+			name = Torque;
 			productInstallPath = "$(HOME)/Applications";
 			productName = Notation;
-			productReference = 8D1107320486CEB800E47090 /* nvALT.app */;
+			productReference = 8D1107320486CEB800E47090 /* Torque.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1463,7 +1463,7 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = elasticthreads;
 			};
-			buildConfigurationList = 212B842709780B5000F3597F /* Build configuration list for PBXProject "Notation" */;
+			buildConfigurationList = 212B842709780B5000F3597F /* Build configuration list for PBXProject "Torque" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -1484,7 +1484,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Notation */,
+				8D1107260486CEB800E47090 /* Torque */,
 			);
 		};
 /* End PBXProject section */
@@ -1518,7 +1518,7 @@
 				219D1BB3110EA66A005E7DF5 /* TBAlert.png in Resources */,
 				219D22301111564F005E7DF5 /* This is the title of a note.nvhelp in Resources */,
 				21317FAF1113840E00472211 /* Excruciatingly Useful Shortcuts.nvhelp in Resources */,
-				57F27F7B11973A7F00C63ACF /* Notation.sdef in Resources */,
+				57F27F7B11973A7F00C63ACF /* Torque.sdef in Resources */,
 				2128651E1278AF220013820A /* ServicesMenu.strings in Resources */,
 				21C0F8A212C7E7160068693F /* Fonts & Colors.tiff in Resources */,
 				216D9C2E12CFEF2A0004B9CE /* LinkBackPressed.tif in Resources */,
@@ -2288,7 +2288,7 @@
 					"-whatsloaded",
 				);
 				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
-				PRODUCT_NAME = nvALT;
+				PRODUCT_NAME = Torque;
 				PROVISIONING_PROFILE = "5C02B60F-CC46-4089-8BD9-FF6E1382772B";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
@@ -2356,7 +2356,7 @@
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
-				PRODUCT_NAME = nvALT;
+				PRODUCT_NAME = Torque;
 				PROVISIONING_PROFILE = "5C02B60F-CC46-4089-8BD9-FF6E1382772B";
 				SDKROOT = macosx;
 				SECTORDER_FLAGS = (
@@ -2388,7 +2388,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		212B842309780B5000F3597F /* Build configuration list for PBXNativeTarget "Notation" */ = {
+		212B842309780B5000F3597F /* Build configuration list for PBXNativeTarget "Torque" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C9CB58C134A7F0400073277 /* ForBuilding */,
@@ -2397,7 +2397,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		212B842709780B5000F3597F /* Build configuration list for PBXProject "Notation" */ = {
+		212B842709780B5000F3597F /* Build configuration list for PBXProject "Torque" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C9CB58B134A7F0400073277 /* ForBuilding */,

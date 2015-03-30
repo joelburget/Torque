@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D1107260486CEB800E47090"
-               BuildableName = "nvALT.app"
-               BlueprintName = "Notation"
-               ReferencedContainer = "container:Notation.xcodeproj">
+               BuildableName = "Torque.app"
+               BlueprintName = "Torque"
+               ReferencedContainer = "container:Torque.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,16 +26,16 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "ForBuilding">
+      buildConfiguration = "Development">
       <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "ForBuilding"
+      buildConfiguration = "Development"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "nvALT.app"
-            BlueprintName = "Notation"
-            ReferencedContainer = "container:Notation.xcodeproj">
+            BuildableName = "Torque.app"
+            BlueprintName = "Torque"
+            ReferencedContainer = "container:Torque.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -56,24 +56,24 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "ForBuilding"
+      buildConfiguration = "Development"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "nvALT.app"
-            BlueprintName = "Notation"
-            ReferencedContainer = "container:Notation.xcodeproj">
+            BuildableName = "Torque.app"
+            BlueprintName = "Torque"
+            ReferencedContainer = "container:Torque.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "ForBuilding">
+      buildConfiguration = "Development">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "ForBuilding"
+      buildConfiguration = "Deployment"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

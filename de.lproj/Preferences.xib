@@ -1190,7 +1190,7 @@
 						<object class="NSButtonCell" key="NSCell" id="997320611">
 							<int key="NSCellFlags">67108864</int>
 							<int key="NSCellFlags2">67108864</int>
-							<string key="NSContents">Use nvALT Scrollbars:  </string>
+							<string key="NSContents">Use Torque Scrollbars:  </string>
 							<reference key="NSSupport" ref="665773200"/>
 							<reference key="NSControlView" ref="286684738"/>
 							<int key="NSButtonFlags">1210863872</int>

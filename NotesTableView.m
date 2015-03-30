@@ -1305,7 +1305,7 @@ enum { kNext_Tag = 'j', kPrev_Tag = 'k' };
 }
 
 
-#pragma mark - nvALT work
+#pragma mark - Torque work
 
 - (BOOL)isOpaque{
     return YES;

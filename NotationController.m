@@ -349,7 +349,7 @@ returnResult:
     OSStatus err = noErr;
 	NSData *walSessionKey = [notationPrefs WALSessionKey];
     
-    //nvALT change to store Interim Note-Changes in ~/Library/Caches/
+    //Torque change to store Interim Note-Changes in ~/Library/Caches/
 #if kUseCachesFolderForInterimNoteChanges
     NSString *cPath=[self createCachesFolder];
     if (cPath) {
@@ -1582,7 +1582,7 @@ bail:
     [super dealloc];
 }
 
-#pragma mark nvALT stuff
+#pragma mark Torque stuff
 - (NSString *)createCachesFolder{
     NSString *path = nil;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);

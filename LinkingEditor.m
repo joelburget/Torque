@@ -1743,7 +1743,7 @@ static long (*GetGetScriptManagerVariablePointer())(short) {
 }
 
 
-#pragma mark - nvALT additions
+#pragma mark - Torque additions
 
 - (BOOL)isOpaque{
     return YES;

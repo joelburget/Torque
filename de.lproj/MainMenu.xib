@@ -53,7 +53,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{280, 392}, {397, 464}}</string>
 				<int key="NSWTFlags">1618477056</int>
-				<string key="NSWindowTitle">nvALT</string>
+				<string key="NSWindowTitle">Torque</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSMutableString" key="NSViewClass">
 					<characters key="NS.bytes">View</characters>
@@ -76,7 +76,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="896225021">
 						<reference key="NSMenu" ref="828948142"/>
-						<string key="NSTitle">nvALT</string>
+						<string key="NSTitle">Torque</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -91,11 +91,11 @@
 						<string key="NSAction">submenuAction:</string>
 						<reference key="NSTarget" ref="94599857"/>
 						<object class="NSMenu" key="NSSubmenu" id="94599857">
-							<string key="NSTitle">nvALT</string>
+							<string key="NSTitle">Torque</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="302895410">
 									<reference key="NSMenu" ref="94599857"/>
-									<string key="NSTitle">Über nvALT</string>
+									<string key="NSTitle">Über Torque</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="259802817"/>
@@ -182,7 +182,7 @@
 								</object>
 								<object class="NSMenuItem" id="116148528">
 									<reference key="NSMenu" ref="94599857"/>
-									<string key="NSTitle">nvALT ausblenden</string>
+									<string key="NSTitle">Torque ausblenden</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -220,7 +220,7 @@
 								</object>
 								<object class="NSMenuItem" id="803154628">
 									<reference key="NSMenu" ref="94599857"/>
-									<string key="NSTitle">nvALT beenden</string>
+									<string key="NSTitle">Torque beenden</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1344,7 +1344,7 @@
 								</object>
 								<object class="NSMenuItem" id="563210375">
 									<reference key="NSMenu" ref="562662757"/>
-									<string key="NSTitle">nvALT Home</string>
+									<string key="NSTitle">Torque Home</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="259802817"/>
@@ -1955,7 +1955,7 @@
 					</object>
 					<object class="NSMenuItem" id="113931038">
 						<reference key="NSMenu" ref="1004757369"/>
-						<string key="NSTitle">nvALT beenden</string>
+						<string key="NSTitle">Torque beenden</string>
 						<string key="NSKeyEquiv">q</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>

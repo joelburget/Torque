@@ -53,7 +53,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{280, 392}, {397, 464}}</string>
 				<int key="NSWTFlags">1618477056</int>
-				<string key="NSWindowTitle">nvALT</string>
+				<string key="NSWindowTitle">Torque</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSMutableString" key="NSViewClass">
 					<characters key="NS.bytes">View</characters>
@@ -78,7 +78,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="817044718">
 						<reference key="NSMenu" ref="657691538"/>
-						<string key="NSTitle">nvALT</string>
+						<string key="NSTitle">Torque</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -92,11 +92,11 @@
 						</object>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="789159888">
-							<string key="NSTitle">nvALT</string>
+							<string key="NSTitle">Torque</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="701056338">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">关于 nvALT</string>
+									<string key="NSTitle">关于 Torque</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>
@@ -182,7 +182,7 @@
 								</object>
 								<object class="NSMenuItem" id="481781740">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">隐藏 nvALT</string>
+									<string key="NSTitle">隐藏 Torque</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -220,7 +220,7 @@
 								</object>
 								<object class="NSMenuItem" id="373033928">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">退出 nvALT</string>
+									<string key="NSTitle">退出 Torque</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1353,7 +1353,7 @@
 								</object>
 								<object class="NSMenuItem" id="102414457">
 									<reference key="NSMenu" ref="617511002"/>
-									<string key="NSTitle">nvALT 网站</string>
+									<string key="NSTitle">Torque 网站</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>
@@ -1956,7 +1956,7 @@
 					</object>
 					<object class="NSMenuItem" id="305228017">
 						<reference key="NSMenu" ref="1034607367"/>
-						<string key="NSTitle">退出 nvALT</string>
+						<string key="NSTitle">退出 Torque</string>
 						<string key="NSKeyEquiv">q</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>

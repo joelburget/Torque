@@ -1,4 +1,4 @@
 ﻿/* Localized versions of Info.plist keys */
 
-CFBundleName = "nvALT";
+CFBundleName = "Torque";
 NSHumanReadableCopyright = "Traduction française par David Bosman";

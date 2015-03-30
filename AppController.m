@@ -1112,7 +1112,7 @@ terminateApp:
 		case 4:		//development site
 			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/ttscoff/nv/wiki"]];
 			break;
-        case 5:     //nvALT home
+        case 5:     //Torque home
             [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://brettterpstra.com/project/nvalt/"]];
             break;
         case 6:     //ElasticThreads
@@ -2348,7 +2348,7 @@ terminateApp:
 	return window;
 }
 
-#pragma mark nvALT methods
+#pragma mark Torque methods
 
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
     if (aTableView==notesTableView) {
@@ -2577,7 +2577,7 @@ terminateApp:
     }
     //        [[NSUserDefaults standardUserDefaults] setBool:!isVis forKey:@"ToolbarHidden"];
     if (isVis) {
-        [window setTitle:@"nvALT"];
+        [window setTitle:@"Torque"];
         if (currentNote&&(![[field stringValue]isEqualToString:titleOfNote(currentNote)]))
             [field setStringValue:titleOfNote(currentNote)];
         

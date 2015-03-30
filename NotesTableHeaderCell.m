@@ -86,7 +86,7 @@ NSColor *tColor;
 
 
 
-#pragma mark - nvALT additions
+#pragma mark - Torque additions
 
 - (void)drawBorderWithFrame:(NSRect)cellFrame{
     NSBezierPath* thePath = [NSBezierPath new];

@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">14C109</string>
+		<string key="IBDocument.SystemVersion">14C1514</string>
 		<string key="IBDocument.InterfaceBuilderVersion">6751</string>
 		<string key="IBDocument.AppKitVersion">1344.72</string>
 		<string key="IBDocument.HIToolboxVersion">757.30</string>
@@ -53,7 +53,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{280, 392}, {397, 464}}</string>
 				<int key="NSWTFlags">1618477056</int>
-				<string key="NSWindowTitle">nvALT</string>
+				<string key="NSWindowTitle">Torque</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSMutableString" key="NSViewClass">
 					<characters key="NS.bytes">View</characters>
@@ -76,7 +76,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="817044718">
 						<reference key="NSMenu" ref="657691538"/>
-						<string key="NSTitle">nvALT</string>
+						<string key="NSTitle">Torque</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -91,11 +91,11 @@
 						<string key="NSAction">submenuAction:</string>
 						<reference key="NSTarget" ref="789159888"/>
 						<object class="NSMenu" key="NSSubmenu" id="789159888">
-							<string key="NSTitle">nvALT</string>
+							<string key="NSTitle">Torque</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="701056338">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">About nvALT</string>
+									<string key="NSTitle">About Torque</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>
@@ -184,7 +184,7 @@
 								</object>
 								<object class="NSMenuItem" id="481781740">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">Hide nvALT</string>
+									<string key="NSTitle">Hide Torque</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -222,7 +222,7 @@
 								</object>
 								<object class="NSMenuItem" id="373033928">
 									<reference key="NSMenu" ref="789159888"/>
-									<string key="NSTitle">Quit nvALT</string>
+									<string key="NSTitle">Quit Torque</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1386,7 +1386,7 @@
 								</object>
 								<object class="NSMenuItem" id="102414457">
 									<reference key="NSMenu" ref="617511002"/>
-									<string key="NSTitle">nvALT Home</string>
+									<string key="NSTitle">Torque Home</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>
@@ -1989,7 +1989,7 @@
 					</object>
 					<object class="NSMenuItem" id="969587460">
 						<reference key="NSMenu" ref="1034607367"/>
-						<string key="NSTitle">About nvALT</string>
+						<string key="NSTitle">About Torque</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="838981797"/>
@@ -2016,7 +2016,7 @@
 					</object>
 					<object class="NSMenuItem" id="305228017">
 						<reference key="NSMenu" ref="1034607367"/>
-						<string key="NSTitle">Quit nvALT</string>
+						<string key="NSTitle">Quit Torque</string>
 						<string key="NSKeyEquiv">q</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -2077,7 +2077,7 @@
 									<int key="NSTCFlags">1</int>
 								</object>
 								<object class="NSTextViewSharedData" key="NSSharedData">
-									<int key="NSFlags">67120163</int>
+									<int key="NSFlags">117582883</int>
 									<int key="NSTextCheckingTypes">0</int>
 									<nil key="NSMarkedAttributes"/>
 									<reference key="NSBackgroundColor" ref="883979725"/>
