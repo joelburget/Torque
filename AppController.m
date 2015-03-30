@@ -114,6 +114,10 @@ BOOL splitViewAwoke;
         
         }
         
+        // TODO(viraj): see if the deployment version of the app has working menubar settings and delete this line
+        [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyRegular];
+
+        
         splitViewAwoke = NO;
         windowUndoManager = [[NSUndoManager alloc] init];
         
