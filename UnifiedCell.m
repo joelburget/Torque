@@ -135,16 +135,6 @@
 	return color;
 }
 
-static NSShadow* ShadowForSnowLeopard() {
-	static NSShadow *sh = nil;
-	if (!sh) {
-		sh = [[NSShadow alloc] init];
-		[sh setShadowOffset:NSMakeSize(0,-1)];
-		[sh setShadowColor:[NSColor colorWithCalibratedWhite:0.15 alpha:0.67]];
-		[sh setShadowBlurRadius:0.5];
-	}
-	return sh;
-}
 
 NSAttributedString *AttributedStringForSelection(NSAttributedString *str, BOOL withShadow) {
 	//used to modify the cell's attributed string before display when it is selected
@@ -155,9 +145,6 @@ NSAttributedString *AttributedStringForSelection(NSAttributedString *str, BOOL w
 	NSRange fullRange = NSMakeRange(0, [str length]);
 	NSMutableAttributedString *colorFreeStr = [str mutableCopy];
 	[colorFreeStr removeAttribute:NSForegroundColorAttributeName range:fullRange];
-	if (withShadow) {
-		[colorFreeStr addAttribute:NSShadowAttributeName value:ShadowForSnowLeopard() range:NSMakeRange(0, [str length])];
-	}
 	return [colorFreeStr autorelease];
 }
 
@@ -182,11 +169,9 @@ NSAttributedString *AttributedStringForSelection(NSAttributedString *str, BOOL w
 	BOOL isActive = (IsLeopardOrLater && [tv selectionHighlightStyle] == NSTableViewSelectionHighlightStyleSourceList) ? YES : [tv isActiveStyle];
 	
 	NSColor *textColor = ([self isHighlighted] && isActive) ? [NSColor whiteColor] : (![self isHighlighted] ? [[self class] dateColorForTint]/*[NSColor grayColor]*/ : nil);
-	if (textColor)
+    if (textColor) {
 		[baseAttrs setObject:textColor forKey:NSForegroundColorAttributeName];
-	if (IsSnowLeopardOrLater && [self isHighlighted] && ([tv selectionHighlightStyle] == NSTableViewSelectionHighlightStyleSourceList)) {
-		[baseAttrs setObject:ShadowForSnowLeopard() forKey:NSShadowAttributeName];
-	}
+    }
 	
 	float fontHeight = [tv tableFontHeight];
 	
