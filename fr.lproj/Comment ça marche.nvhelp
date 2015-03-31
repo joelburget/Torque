@@ -10,7 +10,7 @@
 \b Entr\'e9e
 \b0  pour cr\'e9er une nouvelle note avec ce titre, ou pour acc\'e9der \'e0 la note correspondante si elle existe d\'e9j\'e0. \
 \
-Notational Velocity recherche automatiquement ce que vous tapez dans le champ 
+Torque Notes recherche automatiquement ce que vous tapez dans le champ 
 \b Chercher ou cr\'e9er
 \b0  \'e0 la fois dans le titre et le contenu des notes existantes. Il affiche la liste des notes correspondantes dans la zone juste en dessous du champ 
 \b Chercher ou cr\'e9er
@@ -20,7 +20,7 @@ Souvenez-vous que cr\'e9er ou rechercher une note se fait donc simultan\'e9ment,
 \b Chercher ou cr\'e9er
 \b0 .\
 \
-Lorsque vous s\'e9lectionnez une note dans la liste (par exemple en utilisant les fl\'e8ches haut/bas ou en clignant dessus), Notational Velocity affiche automatiquement son contenu dans la zone de texte du bas : c'est ce que vous \'eates occup\'e9 \'e0 lire, en cet instant pr\'e9cis ;-)\
+Lorsque vous s\'e9lectionnez une note dans la liste (par exemple en utilisant les fl\'e8ches haut/bas ou en clignant dessus), Torque Notes affiche automatiquement son contenu dans la zone de texte du bas : c'est ce que vous \'eates occup\'e9 \'e0 lire, en cet instant pr\'e9cis ;-)\
 \
 Pour cr\'e9er une nouvelle note, tapez simplement son titre dans le champ 
 \b Chercher ou cr\'e9er
@@ -44,4 +44,4 @@ NV enregistre en permanence les changements pendant que vous cr\'e9ez et modifie
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 \cf0 \CocoaLigature0 \
 
-\i Ces notes ont \'e9t\'e9 incluses dans Notational Velocity pour vous aider \'e0 d\'e9marrer. Vous pouvez les supprimer \'e0 tout moment.}
+\i Ces notes ont \'e9t\'e9 incluses dans Torque Notes pour vous aider \'e0 d\'e9marrer. Vous pouvez les supprimer \'e0 tout moment.}

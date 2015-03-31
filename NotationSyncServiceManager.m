@@ -12,7 +12,7 @@
    - Redistributions in binary form must reproduce the above copyright notice, this list of 
 	 conditions and the following disclaimer in the documentation and/or other materials provided with
      the distribution.
-   - Neither the name of Notational Velocity nor the names of its contributors may be used to endorse 
+   - Neither the name of Torque Notes nor the names of its contributors may be used to endorse 
      or promote products derived from this software without specific prior written permission. */
 
 
@@ -430,15 +430,15 @@ ended:
 	NSInteger res = NSAlertDefaultReturn;
 	
 	if (!foundNotes) {
-		res = NSRunCriticalAlertPanel([NSString stringWithFormat:NSLocalizedString(@"The %@ server reports that no notes exist. Delete all %u notes in Notational Velocity to match it, or re-upload them now?", nil), serviceTitle, [allNotes count]],
-									  [NSString stringWithFormat:NSLocalizedString(@"If your %@ account is different, you may prefer to create a new database in Notational Velocity instead.", nil), serviceTitle],
+		res = NSRunCriticalAlertPanel([NSString stringWithFormat:NSLocalizedString(@"The %@ server reports that no notes exist. Delete all %u notes in Torque Notes to match it, or re-upload them now?", nil), serviceTitle, [allNotes count]],
+									  [NSString stringWithFormat:NSLocalizedString(@"If your %@ account is different, you may prefer to create a new database in Torque Notes instead.", nil), serviceTitle],
 									  [NSString stringWithFormat:NSLocalizedString(@"Turn Off Syncing", nil), serviceTitle], 
 									  NSLocalizedString(@"Re-upload Notes", @"dialog button for uploading local notes when none exist remotely"), 
 									  NSLocalizedString(@"Remove All Notes", @"dialog button for deleting all notes when none exist remotely"));
 	} else {
-		res = NSRunCriticalAlertPanel([NSString stringWithFormat:NSLocalizedString(@"The %@ server holds a different set of notes. Replace all %u notes in Notational Velocity with the %u notes on the server, or merge both sets together?", nil), 
+		res = NSRunCriticalAlertPanel([NSString stringWithFormat:NSLocalizedString(@"The %@ server holds a different set of notes. Replace all %u notes in Torque Notes with the %u notes on the server, or merge both sets together?", nil), 
 									   serviceTitle, [allNotes count], foundNotes],
-									  [NSString stringWithFormat:NSLocalizedString(@"Replacing will remove all %u notes from Notational Velocity. Merging will upload all notes to %@, omitting duplicates.", nil), 
+									  [NSString stringWithFormat:NSLocalizedString(@"Replacing will remove all %u notes from Torque Notes. Merging will upload all notes to %@, omitting duplicates.", nil), 
 									   [allNotes count], serviceTitle],
 									  [NSString stringWithFormat:NSLocalizedString(@"Turn Off Syncing", nil), serviceTitle], 
 									  NSLocalizedString(@"Merge Notes", @"dialog button for uploading local notes"), 

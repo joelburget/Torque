@@ -12,7 +12,7 @@
    - Redistributions in binary form must reproduce the above copyright notice, this list of 
 	 conditions and the following disclaimer in the documentation and/or other materials provided with
      the distribution.
-   - Neither the name of Notational Velocity nor the names of its contributors may be used to endorse 
+   - Neither the name of Torque Notes nor the names of its contributors may be used to endorse 
      or promote products derived from this software without specific prior written permission. */
 
 
@@ -558,7 +558,7 @@ enum {VERIFY_NOT_ATTEMPTED, VERIFY_FAILED, VERIFY_IN_PROGRESS, VERIFY_SUCCESS};
 			NSLocalizedString(@"plain text",nil), NSLocalizedString(@"rich text",nil), NSLocalizedString(@"HTML",nil) };
 		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Your notes are currently stored as %@ files on disk, but encryption requires a single database. Switch to a database format?",nil), formatStrings[format]]
 										 defaultButton:NSLocalizedString(@"Use a single database file",nil) alternateButton:NSLocalizedString(@"Cancel",nil) otherButton:nil
-							 informativeTextWithFormat:NSLocalizedString(@"Notational Velocity supports encryption only for notes stored in a database file.",nil)];
+							 informativeTextWithFormat:NSLocalizedString(@"Torque Notes supports encryption only for notes stored in a database file.",nil)];
 		
 		[alert beginSheetModalForWindow:[view window] modalDelegate:self 
 						 didEndSelector:@selector(encryptionFormatMismatchSheetDidEnd:returnCode:contextInfo:) contextInfo:NULL];

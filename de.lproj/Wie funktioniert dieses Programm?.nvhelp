@@ -4,11 +4,11 @@
 \margl1440\margr1440\vieww7880\viewh10300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\f0\fs24 \cf0 Beginne die Eingabe eines Textes immer im oberen Suchfeld. Drücke die Eingabgetaste um eine neue Notiz mit dem jeweiligen Titel anzulegen. Während der Eingabe sucht Notational Velocity nach bereits vorhandenen Notizen, deren Titel oder Inhalt deinen gerade eingegebenen Text enthalten. Beachte also, dass die Vergabe eines Notiztitels sowie die Suche immer zeitgleich verlaufen.\
+\f0\fs24 \cf0 Beginne die Eingabe eines Textes immer im oberen Suchfeld. Drücke die Eingabgetaste um eine neue Notiz mit dem jeweiligen Titel anzulegen. Während der Eingabe sucht Torque Notes nach bereits vorhandenen Notizen, deren Titel oder Inhalt deinen gerade eingegebenen Text enthalten. Beachte also, dass die Vergabe eines Notiztitels sowie die Suche immer zeitgleich verlaufen.\
 \
-Wenn du eine der gefundenen Notizen auswählst (z.B. durch Nutzen der Hoch/Runter Pfeiltasten), zeigt Notational Velocity den Inhalt dieser im unteren Feld an (das was du hier gerade liest).\
+Wenn du eine der gefundenen Notizen auswählst (z.B. durch Nutzen der Hoch/Runter Pfeiltasten), zeigt Torque Notes den Inhalt dieser im unteren Feld an (das was du hier gerade liest).\
 \
-Falls du den Beginn einer Notiz eingegeben hast, hat Notational Velocity diese Notiz bereits automatisch ausgewählt.\
+Falls du den Beginn einer Notiz eingegeben hast, hat Torque Notes diese Notiz bereits automatisch ausgewählt.\
 \
 Um eine weitere Notiz anzulegen, musst du einfach erneut im oberen Suchfeld die Texteingabe starten (drücke 
 \f1 \uc0\u8984 
@@ -18,7 +18,7 @@ Um eine weitere Notiz anzulegen, musst du einfach erneut im oberen Suchfeld die 
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\f2\i \cf0 Aber Notational Velocity lässt mich meine Änderungen gar nicht speichern!
+\f2\i \cf0 Aber Torque Notes lässt mich meine Änderungen gar nicht speichern!
 \f0\i0 \
-Notational Velocity speichert deine Änderungen beim Anlegen oder Editieren der Notizen ständig selbständig, so dass ein manuelles "Speichern" entfällt. Toll, oder?\
+Torque Notes speichert deine Änderungen beim Anlegen oder Editieren der Notizen ständig selbständig, so dass ein manuelles "Speichern" entfällt. Toll, oder?\
 }

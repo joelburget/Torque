@@ -1,8 +1,8 @@
-Portions of Notational Velocity contain the following copyrighted materials, the use of which is hereby acknowledged.
+Portions of Torque Notes contain the following copyrighted materials, the use of which is hereby acknowledged.
 
 --
 
-Notational Velocity Icon
+Torque Notes Icon
 
 Copyright (c) 2011 Taylor Carrigan. All rights reserved.
 

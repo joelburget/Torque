@@ -92,7 +92,7 @@
 "No notes were selected for exporting." = "Es wurden keine Notizen zum Exportieren ausgewählt.";
 
 /* No comment provided by engineer. */
-"Notational Velocity should assume the file quotemark%@quotemark was saved with the encoding:" = "Notational Velocity soll voraussetzen, dass die Datei “%@” mit folgender Kodierung gespeichert wurde:";
+"Torque Notes should assume the file quotemark%@quotemark was saved with the encoding:" = "Torque Notes soll voraussetzen, dass die Datei “%@” mit folgender Kodierung gespeichert wurde:";
 
 /* No comment provided by engineer. */
 "Note Importing Cancelled" = "Importieren der Notizen abgebrochen";
@@ -197,7 +197,7 @@
 "Select" = "Wählen";
 
 /* No Comment */
-"Select the folder that Notational Velocity should use for reading and storing notes." = "Wähle das Verzeichnis welches Notational Velocity zum Lesen und Speichern der Notizen verwenden soll.";
+"Select the folder that Torque Notes should use for reading and storing notes." = "Wähle das Verzeichnis welches Torque Notes zum Lesen und Speichern der Notizen verwenden soll.";
 
 /* description for no key combination */
 "(None)" = "(Nichts)";
@@ -230,7 +230,7 @@
 "Reverting to current location of %@." = "Zurückkehren zum momentanen Ort von %@.";
 
 /* no comment */
-"Warning: this database was created by a newer version of Notational Velocity. Continue anyway?" = "Warnung: Diese Datenbank wurde von einer aktuelleren Version von Notational Velocity angelegt. Trotzdem fortfahren?";
+"Warning: this database was created by a newer version of Torque Notes. Continue anyway?" = "Warnung: Diese Datenbank wurde von einer aktuelleren Version von Torque Notes angelegt. Trotzdem fortfahren?";
 
 /* no comment */
 "If you make changes, some settings and metadata could be lost." = "Wenn du Änderungen vornimmst, könnten Einstellungen und Metadaten verloren gehen.";
@@ -360,22 +360,22 @@
 "Individual files remain in the notes directory. Leave them alone or move them to the Trash?" = "Die einzelnen Dateien befinden sich noch im Notizenverzeichnis. Sollen sie dort zurückbleiben oder in den Papierkorb verschoben werden?";
 
 /* no comment */
-"<Feedback loop warning title>" = "Warnung: Dieses Notizenverzeichnis wird mit beidem synchronisiert, %@ und %@. Falls mehrere Instanzen von Notational Velocity dieses Verzeichnis nutzen, wird eine Rückkopplungsschleife produziert.";
+"<Feedback loop warning title>" = "Warnung: Dieses Notizenverzeichnis wird mit beidem synchronisiert, %@ und %@. Falls mehrere Instanzen von Torque Notes dieses Verzeichnis nutzen, wird eine Rückkopplungsschleife produziert.";
 
 /* no comment */
 "<Feedback loop warning message>" = "Wähle bitte einen anderen Ort für deine Notizen oder deaktiviere die Synchronisation mit %@ um dieses Problem zu vermeiden";
 
 /* No comment provided by engineer. */
-"The %@ server holds a different set of notes. Replace all %u notes in Notational Velocity with the %u notes on the server, or merge both sets together?" = "Auf dem %@ Server ist ein abweichender Satz an Notizen gespeichert. Alle %u Notizen in Notational Velocity mit den %u Notizen vom Server ersetzen oder alle Notizen zusammenfügen?";
+"The %@ server holds a different set of notes. Replace all %u notes in Torque Notes with the %u notes on the server, or merge both sets together?" = "Auf dem %@ Server ist ein abweichender Satz an Notizen gespeichert. Alle %u Notizen in Torque Notes mit den %u Notizen vom Server ersetzen oder alle Notizen zusammenfügen?";
 
 /* No comment provided by engineer. */
-"The %@ server reports that no notes exist. Delete all %u notes in Notational Velocity to match it, or re-upload them now?" = "Der %@ Server teilt mit, dass dort keine Notizen existieren. Sollen alle %u Notizen in Notational Velocity ebenfalls gelöscht oder jetzt neu hochgeladen werden?";
+"The %@ server reports that no notes exist. Delete all %u notes in Torque Notes to match it, or re-upload them now?" = "Der %@ Server teilt mit, dass dort keine Notizen existieren. Sollen alle %u Notizen in Torque Notes ebenfalls gelöscht oder jetzt neu hochgeladen werden?";
 
 /* No comment provided by engineer. */
-"Replacing will remove all %u notes from Notational Velocity. Merging will upload all notes to %@, omitting duplicates." = "Das Ersetzen wird alle %u Notizen aus Notational Velocity löschen. Das Hinzufügen wird alle Notizen zu %@ hochladen, während Duplikate ausgelassen werden.";
+"Replacing will remove all %u notes from Torque Notes. Merging will upload all notes to %@, omitting duplicates." = "Das Ersetzen wird alle %u Notizen aus Torque Notes löschen. Das Hinzufügen wird alle Notizen zu %@ hochladen, während Duplikate ausgelassen werden.";
 
 /* No comment provided by engineer. */
-"If your %@ account is different, you may prefer to create a new database in Notational Velocity instead." = "Falls du einen unterschiedlichen %@ Account verwendest, möchtest du anstatt dessen vielleicht lieber eine neue Datenbank in Notational Velocity anlegen.";
+"If your %@ account is different, you may prefer to create a new database in Torque Notes instead." = "Falls du einen unterschiedlichen %@ Account verwendest, möchtest du anstatt dessen vielleicht lieber eine neue Datenbank in Torque Notes anlegen.";
 
 /* default button in the dialog above */
 "Turn Off Syncing" = "Synchronisierung deaktivieren";
@@ -507,7 +507,7 @@
 "No note selected." = "Keine Notiz ausgewählt.";
 
 /* No comment provided by engineer. */
-"Notational Velocity supports encryption only for notes stored in a database file." = "Notational Velocity unterstützt die Verschlüsselung nur für Notizen, welche in einer einzelnen Datenbankdatei gespeichert werden.";
+"Torque Notes supports encryption only for notes stored in a database file." = "Torque Notes unterstützt die Verschlüsselung nur für Notizen, welche in einer einzelnen Datenbankdatei gespeichert werden.";
 
 /* No comment provided by engineer. */
 "Open Console in /Applications/Utilities/ for more information." = "Konsole in /Applications/Utilities/ öffnen für weitere Informationen.";
@@ -549,7 +549,7 @@
 "rich text" = "formatierte Text";
 
 /* No comment provided by engineer. */
-"Select a new location for your Notational Velocity notes." = "Neuen Ort für die Notational Velocity Notizen wählen.";
+"Select a new location for your Torque Notes notes." = "Neuen Ort für die Torque Notes Notizen wählen.";
 
 /* menu item title for showing bookmarks */
 "Show Bookmarks" = "Lesezeichen anzeigen";
@@ -567,7 +567,7 @@
 "Unable to create an FSRef from the chosen directory." = "FSRef konnte vom gewählten Verzeichnis nicht angelegt werden.";
 
 /* No comment provided by engineer. */
-"Unable to create or access the Interim Note-Changes file. Is another copy of Notational Velocity currently running?" = "Auf die “Interim Note-Changes“ Datei konnte nicht zugegriffen werden. Läuft gerade vielleicht eine weitere Instanz von Notational Velocity?";
+"Unable to create or access the Interim Note-Changes file. Is another copy of Torque Notes currently running?" = "Auf die “Interim Note-Changes“ Datei konnte nicht zugegriffen werden. Läuft gerade vielleicht eine weitere Instanz von Torque Notes?";
 
 /* No comment provided by engineer. */
 "Strikethrough" = "Durchgestrichen";
@@ -641,7 +641,7 @@
 "Switch to Horizontal Layout" = "Zu horizontaler Darstellung wechseln";
 
 /* for warning about incompatibility with TextExpander, Typinator, etc. */
-"Secure Text Entry will prevent %@, which is currently installed on this computer, from working in Notational Velocity." = "Die Sichere Texteingabe wird %@, das momentan auf diesem Computer installiert ist, daran hindern, in Notational Velocity zu funktionieren.";
+"Secure Text Entry will prevent %@, which is currently installed on this computer, from working in Torque Notes." = "Die Sichere Texteingabe wird %@, das momentan auf diesem Computer installiert ist, daran hindern, in Torque Notes zu funktionieren.";
 
 /* Status message after downloading a URL */
 "Importing content..." = "Importiere Inhalt…";

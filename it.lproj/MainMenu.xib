@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">14C109</string>
+		<string key="IBDocument.SystemVersion">14C1514</string>
 		<string key="IBDocument.InterfaceBuilderVersion">6751</string>
 		<string key="IBDocument.AppKitVersion">1344.72</string>
 		<string key="IBDocument.HIToolboxVersion">757.30</string>
@@ -1395,7 +1395,7 @@
 								</object>
 								<object class="NSMenuItem" id="571868197">
 									<reference key="NSMenu" ref="617511002"/>
-									<string key="NSTitle">Sito web di Notational Velocity</string>
+									<string key="NSTitle">Sito web di Torque Notes</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>
