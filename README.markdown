@@ -1,4 +1,9 @@
-# Torque 2
+# Torque Notes
+
+
+naming changes:
+nvALT -> Torque
+Notational Velocity -> Torque Notes
 
 A collaboration between Brett Terpstra (ttscoff) and David Halter (ElasticThreads) based on [DivineDominion's](github.com/divineDominion/nv) fork. Torque adds a few features we'd been looking for (and let me get some coding practice).
 
