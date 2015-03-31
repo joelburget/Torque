@@ -124,7 +124,7 @@
 				<string>blor</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Torque Notes BLOR</string>
+			<string>Torque BLOR</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 		</dict>

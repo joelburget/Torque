@@ -2,8 +2,8 @@
 <!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
 <dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
   <xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
-  <suite name="Torque Notes Scripting" code="nvss"
-    description="Commands and classes for Torque Notes Scripting">
+  <suite name="Torque Scripting" code="nvss"
+    description="Commands and classes for Torque Scripting">
 		<command name="search" code="nvsssrch" description="Perform a search">
 			<cocoa class="SearchCommand"/>
 			<direct-parameter>
