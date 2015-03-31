@@ -223,6 +223,8 @@ BOOL splitViewAwoke;
 	[field setDelegate:self];
 	[textView setDelegate:self];
     
+    [textView initHL];
+    
 	//set up temporary FastListDataSource containing false visible notes
     
 	//this will not make a difference

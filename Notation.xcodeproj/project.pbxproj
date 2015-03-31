@@ -249,6 +249,18 @@
 		5CF96E0A132EA29D0079B3FD /* EncodingsManager.nib in Resources */ = {isa = PBXBuildFile; fileRef = 212DCB2F0A6AE38500F74E46 /* EncodingsManager.nib */; };
 		5CF96E0B132EA29D0079B3FD /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219195E409D3A20F00586B15 /* Preferences.xib */; };
 		5CF96E0C132EA29D0079B3FD /* NotationPrefsView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 21A2FA7A09DF64E9001AF0B5 /* NotationPrefsView.nib */; };
+		5D0A9CF31AC9EEA800662932 /* HGMarkdownHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9C7D1AC9EEA800662932 /* HGMarkdownHighlighter.m */; };
+		5D0A9CF41AC9EEA800662932 /* HGMarkdownHighlightingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9C7F1AC9EEA800662932 /* HGMarkdownHighlightingStyle.m */; };
+		5D0A9CF91AC9EEA800662932 /* pmh_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9C8A1AC9EEA800662932 /* pmh_parser.c */; };
+		5D0A9CFA1AC9EEA800662932 /* pmh_styleparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A9C8C1AC9EEA800662932 /* pmh_styleparser.c */; };
+		5D0A9CFB1AC9EEA800662932 /* error.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C8F1AC9EEA800662932 /* error.style */; };
+		5D0A9CFC1AC9EEA800662932 /* fontsizes.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C901AC9EEA800662932 /* fontsizes.style */; };
+		5D0A9CFD1AC9EEA800662932 /* macoslineseparator.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C911AC9EEA800662932 /* macoslineseparator.style */; };
+		5D0A9CFE1AC9EEA800662932 /* playground.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C921AC9EEA800662932 /* playground.style */; };
+		5D0A9CFF1AC9EEA800662932 /* solarized-dark.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C931AC9EEA800662932 /* solarized-dark.style */; };
+		5D0A9D001AC9EEA800662932 /* solarized-light.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C941AC9EEA800662932 /* solarized-light.style */; };
+		5D0A9D011AC9EEA800662932 /* teststyle.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C951AC9EEA800662932 /* teststyle.style */; };
+		5D0A9D021AC9EEA800662932 /* winlineseparator.style in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A9C961AC9EEA800662932 /* winlineseparator.style */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -778,6 +790,23 @@
 		5CF96D90132EA29D0079B3FD /* pt */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = pt; path = pt.lproj/URLGetter.nib; sourceTree = "<group>"; };
 		5CFF810713A52EE2008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5CFF810913A536F7008A93A3 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/Preferences.xib; sourceTree = "<group>"; };
+		5D0A9C7C1AC9EEA800662932 /* HGMarkdownHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMarkdownHighlighter.h; sourceTree = "<group>"; };
+		5D0A9C7D1AC9EEA800662932 /* HGMarkdownHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMarkdownHighlighter.m; sourceTree = "<group>"; };
+		5D0A9C7E1AC9EEA800662932 /* HGMarkdownHighlightingStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMarkdownHighlightingStyle.h; sourceTree = "<group>"; };
+		5D0A9C7F1AC9EEA800662932 /* HGMarkdownHighlightingStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMarkdownHighlightingStyle.m; sourceTree = "<group>"; };
+		5D0A9C891AC9EEA800662932 /* pmh_definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_definitions.h; sourceTree = "<group>"; };
+		5D0A9C8A1AC9EEA800662932 /* pmh_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pmh_parser.c; sourceTree = "<group>"; };
+		5D0A9C8B1AC9EEA800662932 /* pmh_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_parser.h; sourceTree = "<group>"; };
+		5D0A9C8C1AC9EEA800662932 /* pmh_styleparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pmh_styleparser.c; sourceTree = "<group>"; };
+		5D0A9C8D1AC9EEA800662932 /* pmh_styleparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_styleparser.h; sourceTree = "<group>"; };
+		5D0A9C8F1AC9EEA800662932 /* error.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = error.style; sourceTree = "<group>"; };
+		5D0A9C901AC9EEA800662932 /* fontsizes.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontsizes.style; sourceTree = "<group>"; };
+		5D0A9C911AC9EEA800662932 /* macoslineseparator.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = macoslineseparator.style; sourceTree = "<group>"; };
+		5D0A9C921AC9EEA800662932 /* playground.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = playground.style; sourceTree = "<group>"; };
+		5D0A9C931AC9EEA800662932 /* solarized-dark.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "solarized-dark.style"; sourceTree = "<group>"; };
+		5D0A9C941AC9EEA800662932 /* solarized-light.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "solarized-light.style"; sourceTree = "<group>"; };
+		5D0A9C951AC9EEA800662932 /* teststyle.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teststyle.style; sourceTree = "<group>"; };
+		5D0A9C961AC9EEA800662932 /* winlineseparator.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = winlineseparator.style; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* nvALT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nvALT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
@@ -1279,6 +1308,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5D0A9C6B1AC9EEA800662932 /* peg-markdown-highlight */,
 				93B90E7D138601C100BEC5FB /* ODBEditor */,
 				5C96F5A8131C379200A2E4AC /* Markup */,
 				5CA10FFA131C2A7600DE1F91 /* readability */,
@@ -1418,6 +1448,46 @@
 			path = readability;
 			sourceTree = "<group>";
 		};
+		5D0A9C6B1AC9EEA800662932 /* peg-markdown-highlight */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A9C751AC9EEA800662932 /* example_cocoa */,
+			);
+			path = "peg-markdown-highlight";
+			sourceTree = "<group>";
+		};
+		5D0A9C751AC9EEA800662932 /* example_cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A9C7C1AC9EEA800662932 /* HGMarkdownHighlighter.h */,
+				5D0A9C7D1AC9EEA800662932 /* HGMarkdownHighlighter.m */,
+				5D0A9C7E1AC9EEA800662932 /* HGMarkdownHighlightingStyle.h */,
+				5D0A9C7F1AC9EEA800662932 /* HGMarkdownHighlightingStyle.m */,
+				5D0A9C891AC9EEA800662932 /* pmh_definitions.h */,
+				5D0A9C8A1AC9EEA800662932 /* pmh_parser.c */,
+				5D0A9C8B1AC9EEA800662932 /* pmh_parser.h */,
+				5D0A9C8C1AC9EEA800662932 /* pmh_styleparser.c */,
+				5D0A9C8D1AC9EEA800662932 /* pmh_styleparser.h */,
+				5D0A9C8E1AC9EEA800662932 /* styles */,
+			);
+			path = example_cocoa;
+			sourceTree = "<group>";
+		};
+		5D0A9C8E1AC9EEA800662932 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A9C8F1AC9EEA800662932 /* error.style */,
+				5D0A9C901AC9EEA800662932 /* fontsizes.style */,
+				5D0A9C911AC9EEA800662932 /* macoslineseparator.style */,
+				5D0A9C921AC9EEA800662932 /* playground.style */,
+				5D0A9C931AC9EEA800662932 /* solarized-dark.style */,
+				5D0A9C941AC9EEA800662932 /* solarized-light.style */,
+				5D0A9C951AC9EEA800662932 /* teststyle.style */,
+				5D0A9C961AC9EEA800662932 /* winlineseparator.style */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
 		93B90E7D138601C100BEC5FB /* ODBEditor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1500,6 +1570,7 @@
 				211344C00B3551BD0081B064 /* BlorPasswordRetriever.nib in Resources */,
 				21F1CD700B3A38DB001FB5F6 /* PTKeyCodes.plist in Resources */,
 				21F1CD9F0B3A3F88001FB5F6 /* PTKeyComboPanel.nib in Resources */,
+				5D0A9CFE1AC9EEA800662932 /* playground.style in Resources */,
 				21FF94F30B5AD22800DB6A2F /* ExporterManager.nib in Resources */,
 				2110C0D90B65F09F00F5C52E /* SavedSearches.nib in Resources */,
 				21E6B09B0B6E6D0C001ABEDC /* URLGetter.nib in Resources */,
@@ -1518,6 +1589,7 @@
 				219D1BB3110EA66A005E7DF5 /* TBAlert.png in Resources */,
 				219D22301111564F005E7DF5 /* This is the title of a note.nvhelp in Resources */,
 				21317FAF1113840E00472211 /* Excruciatingly Useful Shortcuts.nvhelp in Resources */,
+				5D0A9D011AC9EEA800662932 /* teststyle.style in Resources */,
 				57F27F7B11973A7F00C63ACF /* Notation.sdef in Resources */,
 				2128651E1278AF220013820A /* ServicesMenu.strings in Resources */,
 				21C0F8A212C7E7160068693F /* Fonts & Colors.tiff in Resources */,
@@ -1526,11 +1598,13 @@
 				5CBA7A911305E2DF004ADEBB /* TagEditingManager.xib in Resources */,
 				5C4B353E1307220E00014119 /* TransparentScrollerKnobTop.tif in Resources */,
 				5C4B35401307220E00014119 /* TransparentScrollerSlotBottom.tif in Resources */,
+				5D0A9CFC1AC9EEA800662932 /* fontsizes.style in Resources */,
 				5C4B35421307220E00014119 /* TransparentScrollerSlotVerticalFill.tif in Resources */,
 				5CA11004131C2A7600DE1F91 /* __init__.py in Resources */,
 				5CA11005131C2A7600DE1F91 /* BeautifulSoup.py in Resources */,
 				5CA11006131C2A7600DE1F91 /* BeautifulSoup.pyc in Resources */,
 				5CA11007131C2A7600DE1F91 /* html2text.py in Resources */,
+				5D0A9CFF1AC9EEA800662932 /* solarized-dark.style in Resources */,
 				5CA11008131C2A7600DE1F91 /* page_parser.py in Resources */,
 				5CA11009131C2A7600DE1F91 /* page_parser.pyc in Resources */,
 				5CA1100A131C2A7600DE1F91 /* readability.py in Resources */,
@@ -1547,6 +1621,7 @@
 				5CF01B08132975910083D66E /* greyscrollervertbottom.tiff in Resources */,
 				5CF01B0C132975910083D66E /* greyscrollerverttop.tiff in Resources */,
 				5CF01B22132975DB0083D66E /* BTransparentScrollerSlotBottom.tif in Resources */,
+				5D0A9D021AC9EEA800662932 /* winlineseparator.style in Resources */,
 				5C94376F132A0C9E00B08B80 /* greyscrollervertbottom3.tif in Resources */,
 				5C943771132A0C9E00B08B80 /* greyscrollerverttop3.tif in Resources */,
 				5CF96C43132EA1890079B3FD /* Ceci est le titre d'une note.nvhelp in Resources */,
@@ -1563,12 +1638,15 @@
 				5CF96DAB132EA29D0079B3FD /* Dies ist der Titel einer Notiz.nvhelp in Resources */,
 				5CF96DAD132EA29D0079B3FD /* Moglicherweise nutzliche Tastenkurzel.nvhelp in Resources */,
 				5CF96DAE132EA29D0079B3FD /* Wie funktioniert dieses Programm?.nvhelp in Resources */,
+				5D0A9CFD1AC9EEA800662932 /* macoslineseparator.style in Resources */,
 				5CF96DB0132EA29D0079B3FD /* Comment ça marche.nvhelp in Resources */,
 				5CF96DB2132EA29D0079B3FD /* Raccourcis incroyablement utiles.nvhelp in Resources */,
 				5CF96DB8132EA29D0079B3FD /* Contact Information.nvhelp in Resources */,
+				5D0A9D001AC9EEA800662932 /* solarized-light.style in Resources */,
 				5CF96DBA132EA29D0079B3FD /* How does this thing work?.nvhelp in Resources */,
 				5CF96DBC132EA29D0079B3FD /* greyscrollervertfill3.tif in Resources */,
 				5CF96DBF132EA29D0079B3FD /* BTransparentScrollerSlotTop.tif in Resources */,
+				5D0A9CFB1AC9EEA800662932 /* error.style in Resources */,
 				5CF96DC0132EA29D0079B3FD /* scrollbarblue.tif in Resources */,
 				5CF96DC2132EA29D0079B3FD /* greyscrollervertfill.tiff in Resources */,
 				5CF96DC5132EA29D0079B3FD /* TransparentButtonFillP.tiff in Resources */,
@@ -1695,6 +1773,7 @@
 				214495130ADC8A6600E2A2B6 /* PassphrasePicker.m in Sources */,
 				219739FB0AFE42A10046683E /* PassphraseRetriever.m in Sources */,
 				21544FC10B06332600C0D1D5 /* KeyDerivationManager.m in Sources */,
+				5D0A9CF91AC9EEA800662932 /* pmh_parser.c in Sources */,
 				215452080B06541800C0D1D5 /* PassphraseChanger.m in Sources */,
 				215453F00B067A5100C0D1D5 /* KeyDerivationDelaySlider.m in Sources */,
 				212089B10B0C24F500A15A69 /* AlienNoteImporter.m in Sources */,
@@ -1717,6 +1796,7 @@
 				213621F20B92414F008C0830 /* MultiTextFinder.m in Sources */,
 				21469C8C0BEBA6A10094835F /* TemporaryFileCache.m in Sources */,
 				2182B39A106B2296008641E4 /* RBSplitSubview.m in Sources */,
+				5D0A9CF41AC9EEA800662932 /* HGMarkdownHighlightingStyle.m in Sources */,
 				2182B39B106B2296008641E4 /* RBSplitView.m in Sources */,
 				D3EECA00106F66C70023D7F8 /* NVPasswordGenerator.m in Sources */,
 				21BD2ED110DAF31500BA3DF6 /* LinearDividerShader.m in Sources */,
@@ -1742,6 +1822,7 @@
 				215309F412E4E92300AF2739 /* DiskUUIDEntry.m in Sources */,
 				21B64A2612E61FA700D87EFC /* LabelColumnCell.m in Sources */,
 				21B64C4E12E62A5700D87EFC /* UnifiedCell.m in Sources */,
+				5D0A9CFA1AC9EEA800662932 /* pmh_styleparser.c in Sources */,
 				21A3913A12EB4C2F00CEB5F0 /* Spaces.c in Sources */,
 				5CBA7A981305E38C004ADEBB /* TagEditingManager.m in Sources */,
 				5C4B356A1307225000014119 /* ETTransparentScroller.m in Sources */,
@@ -1761,6 +1842,7 @@
 				5CA08C2013301D5E004E3250 /* ETContentView.m in Sources */,
 				5C2FAD2B1333970200FBFD34 /* ETScrollView.m in Sources */,
 				93B90E7A1386018200BEC5FB /* ExternalEditorListController.m in Sources */,
+				5D0A9CF31AC9EEA800662932 /* HGMarkdownHighlighter.m in Sources */,
 				93B90E85138601C100BEC5FB /* NSAppleEventDescriptor-Extensions.m in Sources */,
 				93B90E86138601C100BEC5FB /* ODBEditor.m in Sources */,
 				93B90E921386072E00BEC5FB /* TemporaryFileCachePreparer.m in Sources */,
@@ -2214,6 +2296,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PROVISIONING_PROFILE = "";

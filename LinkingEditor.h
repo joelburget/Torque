@@ -14,6 +14,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <objc/runtime.h>
+#import "HGMarkdownHighlighter.h"
+#import "HGMarkdownHighlightingStyle.h"
 
 @class NotesTableView;
 @class NoteObject;
@@ -27,6 +29,8 @@
     id textFinder;
     IBOutlet NSTextField *controlField;
     IBOutlet NotesTableView *notesTableView;
+    
+    HGMarkdownHighlighter* hl;
 	
 	GlobalPrefs *prefsController;
 	BOOL didRenderFully;
@@ -63,11 +67,10 @@
 @property (readwrite) BOOL managesTextWidth;
 //@property (readonly) BOOL clipboardHasLink;
 
-
+- (void)initHL;
 - (NSColor*)_insertionPointColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;
 - (NSColor*)_linkColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;
 - (NSColor*)_selectionColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;
-- (NSDictionary*)preferredLinkAttributes;
 - (NSRange)selectedRangeWasAutomatic:(BOOL*)automatic;
 - (void)setAutomaticallySelectedRange:(NSRange)newRange;
 - (void)removeHighlightedTerms;
@@ -77,7 +80,6 @@
 - (void)strikethroughNV:(id)sender;
 - (void)bold:(id)sender;
 - (void)italic:(id)sender;
-- (void)applyStyleOfTrait:(NSFontTraitMask)trait alternateAttributeName:(NSString*)attrName alternateAttributeValue:(id)value;
 - (id)highlightLinkAtIndex:(NSUInteger)givenIndex;
 
 - (BOOL)jumpToRenaming;
