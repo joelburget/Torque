@@ -6,7 +6,7 @@
    - Redistributions in binary form must reproduce the above copyright notice, this list of 
 	 conditions and the following disclaimer in the documentation and/or other materials provided with
      the distribution.
-   - Neither the name of Torque Notes nor the names of its contributors may be used to endorse 
+   - Neither the name of Torque nor the names of its contributors may be used to endorse 
      or promote products derived from this software without specific prior written permission. */
 
 #import "AppController.h"
@@ -343,7 +343,7 @@
     [openPanel setTreatsFilePackagesAsDirectories:NO];
     [openPanel setTitle:NSLocalizedString(@"Select a folder",@"title of open panel for selecting a notes folder")];
     [openPanel setPrompt:NSLocalizedString(@"Select", @"title of open panel button to select a folder")];
-    [openPanel setMessage:NSLocalizedString(@"Select the folder that Torque Notes should use for reading and storing notes.",nil)];
+    [openPanel setMessage:NSLocalizedString(@"Select the folder that Torque should use for reading and storing notes.",nil)];
     
     if ([openPanel runModalForDirectory:startingDirectory file:@"Notational Data" types:nil] == NSOKButton) {
 		CFStringRef filename = (CFStringRef)[openPanel filename];

@@ -69,7 +69,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="705922310">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string key="NSContents">Les fichiers suivants n'existent plus dans le dossier contenant vos notes. Voulez-vous les restaurer dans le dossier, ou faut-il également effacer leur copie dans Torque Notes ?</string>
+								<string key="NSContents">Les fichiers suivants n'existent plus dans le dossier contenant vos notes. Voulez-vous les restaurer dans le dossier, ou faut-il également effacer leur copie dans Torque ?</string>
 								<object class="NSFont" key="NSSupport" id="932550149">
 									<bool key="IBIsSystemFont">YES</bool>
 									<double key="NSSize">13</double>

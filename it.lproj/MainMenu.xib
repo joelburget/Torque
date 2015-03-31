@@ -1383,7 +1383,7 @@
 								</object>
 								<object class="NSMenuItem" id="571868197">
 									<reference key="NSMenu" ref="617511002"/>
-									<string key="NSTitle">Sito web di Torque Notes</string>
+									<string key="NSTitle">Sito web di Torque</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="838981797"/>

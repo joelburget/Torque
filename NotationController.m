@@ -5,20 +5,20 @@
 //  Created by Zachary Schneirov on 12/19/05.
 
 /*Copyright (c) 2010, Zachary Schneirov. All rights reserved.
-    This file is part of Torque Notes.
+    This file is part of Torque.
 
-    Torque Notes is free software: you can redistribute it and/or modify
+    Torque is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Torque Notes is distributed in the hope that it will be useful,
+    Torque is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Torque Notes.  If not, see <http://www.gnu.org/licenses/>. */
+    along with Torque.  If not, see <http://www.gnu.org/licenses/>. */
 
 
 #import "AppController.h"
@@ -207,7 +207,7 @@
 			notesChanged = YES;
 			[self flushEverything];
 		} else if ([notationPrefs epochIteration] > EPOC_ITERATION) {
-			if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning: this database was created by a newer version of Torque Notes. Continue anyway?", nil), 
+			if (NSRunCriticalAlertPanel(NSLocalizedString(@"Warning: this database was created by a newer version of Torque. Continue anyway?", nil), 
 										NSLocalizedString(@"If you make changes, some settings and metadata will be lost.", nil), 
 										NSLocalizedString(@"Quit", nil), NSLocalizedString(@"Continue", nil), nil) == NSAlertDefaultReturn)
 			exit(0);
@@ -575,7 +575,7 @@ bail:
 	
 	[self flushAllNoteChanges];
 	
-	NSRunAlertPanel(NSLocalizedString(@"Unable to create or access the Interim Note-Changes file. Is another copy of Torque Notes currently running?",nil), 
+	NSRunAlertPanel(NSLocalizedString(@"Unable to create or access the Interim Note-Changes file. Is another copy of Torque currently running?",nil), 
 			NSLocalizedString(@"Open Console in /Applications/Utilities/ for more information.",nil), NSLocalizedString(@"Quit",nil), NULL, NULL);
 	
 	

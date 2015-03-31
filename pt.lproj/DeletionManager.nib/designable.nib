@@ -70,7 +70,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="896040101">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string key="NSContents">Os arquivos a seguir não existem mais na pasta de notas — deseja restaurar para o disco ou remover também do Torque Notes?</string>
+								<string key="NSContents">Os arquivos a seguir não existem mais na pasta de notas — deseja restaurar para o disco ou remover também do Torque?</string>
 								<object class="NSFont" key="NSSupport" id="974988827">
 									<bool key="IBIsSystemFont">YES</bool>
 									<double key="NSSize">13</double>

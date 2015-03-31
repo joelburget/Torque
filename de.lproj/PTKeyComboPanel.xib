@@ -150,7 +150,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="844881720">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">4194304</int>
-								<string key="NSContents">Wähle eine Tastenkombination, um Torque Notes damit jeweils ein- und ausblenden zu können.</string>
+								<string key="NSContents">Wähle eine Tastenkombination, um Torque damit jeweils ein- und ausblenden zu können.</string>
 								<object class="NSFont" key="NSSupport">
 									<bool key="IBIsSystemFont">YES</bool>
 									<double key="NSSize">13</double>

@@ -117,7 +117,7 @@
 														</object>
 													</object>
 												</dictionary>
-												<object class="NSColor" key="NSInsertionColor" id="543572488">
+												<object class="NSColor" key="NSInsertionColor" id="263603677">
 													<int key="NSColorSpace">6</int>
 													<string key="NSCatalogName">System</string>
 													<string key="NSColorName">controlTextColor</string>
@@ -298,7 +298,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<object class="NSTextFieldCell" key="NSCell" id="470850298">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string key="NSContents">Torque Notes peut assumer que le fichier “%@” a été sauvegardé avec l'encodage :</string>
+								<string key="NSContents">Torque peut assumer que le fichier “%@” a été sauvegardé avec l'encodage :</string>
 								<reference key="NSSupport" ref="788241007"/>
 								<reference key="NSControlView" ref="1022219770"/>
 								<object class="NSColor" key="NSBackgroundColor">
@@ -307,7 +307,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 									<string key="NSColorName">controlColor</string>
 									<reference key="NSColor" ref="628745188"/>
 								</object>
-								<reference key="NSTextColor" ref="543572488"/>
+								<reference key="NSTextColor" ref="263603677"/>
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>

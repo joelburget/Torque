@@ -1,8 +1,8 @@
-Portions of Torque Notes contain the following copyrighted materials, the use of which is hereby acknowledged.
+Portions of Torque contain the following copyrighted materials, the use of which is hereby acknowledged.
 
 --
 
-Torque Notes Icon
+Torque Icon
 
 Copyright (c) 2011 Taylor Carrigan. All rights reserved.
 

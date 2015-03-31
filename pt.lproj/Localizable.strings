@@ -92,7 +92,7 @@
 "No notes were selected for exporting." = "Nenhuma nota foi selecionada para exportação.";
 
 /* No comment provided by engineer. */
-"Torque Notes should assume the file quotemark%@quotemark was saved with the encoding:" = "Torque Notes deve assumir que o arquivo “%@” foi salvo com a codificação:";
+"Torque should assume the file quotemark%@quotemark was saved with the encoding:" = "Torque deve assumir que o arquivo “%@” foi salvo com a codificação:";
 
 /* No comment provided by engineer. */
 "Note Importing Cancelled" = "Importação de Nota Cancelada";
@@ -197,7 +197,7 @@
 "Select" = "Selecionar";
 
 /* No Comment */
-"Select the folder that Torque Notes should use for reading and storing notes." = "Selecione a pasta que o Torque Notes deve utilizar para ler e armazenar notas.";
+"Select the folder that Torque should use for reading and storing notes." = "Selecione a pasta que o Torque deve utilizar para ler e armazenar notas.";
 
 /* description for no key combination */
 "(None)" = "(Nenhum)";
@@ -230,7 +230,7 @@
 "Reverting to current location of %@." = "Revertendo para a atual localização do %@.";
 
 /* no comment */
-"Warning: this database was created by a newer version of Torque Notes. Continue anyway?" = "Atenção: este banco de dados foi criado por uma versão mais recente do Torque Notes. Deseja continuar?";
+"Warning: this database was created by a newer version of Torque. Continue anyway?" = "Atenção: este banco de dados foi criado por uma versão mais recente do Torque. Deseja continuar?";
 
 /* no comment */
 "If you make changes, some settings and metadata could be lost." = "Se você fizer alterações, algumas definições e metadados poderão ser perdidos.";
@@ -360,22 +360,22 @@
 "Individual files remain in the notes directory. Leave them alone or move them to the Trash?" = "Os arquivos individuais originais permanecem no diretório de notas. Deseja manter os arquivos ou movê-los para a lixeira?";
 
 /* no comment */
-"<Feedback loop warning title>" = "Atenção: esta pasta de notas está sendo sincronizada com %@ e %@. Múltiplas cópias do Torque Notes utilizando uma mesma pasta pode resultar em um ciclo de realimentação (feedback loop).";
+"<Feedback loop warning title>" = "Atenção: esta pasta de notas está sendo sincronizada com %@ e %@. Múltiplas cópias do Torque utilizando uma mesma pasta pode resultar em um ciclo de realimentação (feedback loop).";
 
 /* no comment */
 "<Feedback loop warning message>" = "Para evitar este problema, escolha um local diferente para a pasta de notas neste computador, ou desative a sincronização de %@.";
 
 /* No comment provided by engineer. */
-"The %@ server holds a different set of notes. Replace all %u notes in Torque Notes with the %u notes on the server, or merge both sets together?" = "O servidor %@ contém um conjunto diferente de notas. Substituir todas as notas %u no Torque Notes com as notas %u do servidor, ou mesclar os dois conjuntos?";
+"The %@ server holds a different set of notes. Replace all %u notes in Torque with the %u notes on the server, or merge both sets together?" = "O servidor %@ contém um conjunto diferente de notas. Substituir todas as notas %u no Torque com as notas %u do servidor, ou mesclar os dois conjuntos?";
 
 /* No comment provided by engineer. */
-"The %@ server reports that no notes exist. Delete all %u notes in Torque Notes to match it, or re-upload them now?" = "Não existem notas no servidor %@. Deseja apagar todas as notas %u no Torque Notes também, ou enviar as notas %u novamente ao servidor?";
+"The %@ server reports that no notes exist. Delete all %u notes in Torque to match it, or re-upload them now?" = "Não existem notas no servidor %@. Deseja apagar todas as notas %u no Torque também, ou enviar as notas %u novamente ao servidor?";
 
 /* No comment provided by engineer. */
-"Replacing will remove all %u notes from Torque Notes. Merging will upload all notes to %@, omitting duplicates." = "“Substituir“ removerá todas as notas %u do Torque Notes. “Mesclar“ irá carregar todas as notas para %@, omitindo itens duplicados.";
+"Replacing will remove all %u notes from Torque. Merging will upload all notes to %@, omitting duplicates." = "“Substituir“ removerá todas as notas %u do Torque. “Mesclar“ irá carregar todas as notas para %@, omitindo itens duplicados.";
 
 /* No comment provided by engineer. */
-"If your %@ account is different, you may prefer to create a new database in Torque Notes instead." = "Se a sua conta %@ for diferente, talvez prefira criar uma nova base de dados no Torque Notes.";
+"If your %@ account is different, you may prefer to create a new database in Torque instead." = "Se a sua conta %@ for diferente, talvez prefira criar uma nova base de dados no Torque.";
 
 /* default button in the dialog above */
 "Turn Off Syncing" = "Desativar Sincronismo";
@@ -504,7 +504,7 @@
 "No note selected." = "Nenhuma Nota Selecionada.";
 
 /* No comment provided by engineer. */
-"Torque Notes supports encryption only for notes stored in a database file." = "Torque Notes suporta criptografia somente em notas armazenadas em um arquivo de base de dados.";
+"Torque supports encryption only for notes stored in a database file." = "Torque suporta criptografia somente em notas armazenadas em um arquivo de base de dados.";
 
 /* No comment provided by engineer. */
 "Open Console in /Applications/Utilities/ for more information." = "Abra o Console em /Aplicativos/Utilitários/ para mais informações.";
@@ -546,7 +546,7 @@
 "rich text" = "texto formatado";
 
 /* No comment provided by engineer. */
-"Select a new location for your Torque Notes notes." = "Selecione um novo local para suas notas do Torque Notes.";
+"Select a new location for your Torque notes." = "Selecione um novo local para suas notas do Torque.";
 
 /* menu item title for showing bookmarks */
 "Show Bookmarks" = "Mostrar Marcadores";
@@ -564,7 +564,7 @@
 "Unable to create an FSRef from the chosen directory." = "Não é possível criar um FSRef do diretório escolhido.";
 
 /* No comment provided by engineer. */
-"Unable to create or access the Interim Note-Changes file. Is another copy of Torque Notes currently running?" = "Não foi possível criar ou acessar o arquivo de alterações de notas temporário. Existe outra cópia do Torque Notes em execução?";
+"Unable to create or access the Interim Note-Changes file. Is another copy of Torque currently running?" = "Não foi possível criar ou acessar o arquivo de alterações de notas temporário. Existe outra cópia do Torque em execução?";
 
 /* No comment provided by engineer. */
 "Strikethrough" = "Tachado";
@@ -638,7 +638,7 @@
 "Switch to Horizontal Layout" = "Alternar para Leiaute Horizontal";
 
 /* for warning about incompatibility with TextExpander, Typinator, etc. */
-"Secure Text Entry will prevent %@, which is currently installed on this computer, from working in Torque Notes." = "Entrada de Texto Segura irá impedir %@, atualmente instalado neste computador, de funcionar no Torque Notes.";
+"Secure Text Entry will prevent %@, which is currently installed on this computer, from working in Torque." = "Entrada de Texto Segura irá impedir %@, atualmente instalado neste computador, de funcionar no Torque.";
 
 /* Status message after downloading a URL */
 "Importing content..." = "Importando conteúdo…";
