@@ -138,7 +138,7 @@ static void sendCallbacksForGlobalPrefs(GlobalPrefs* self, SEL selector, id orig
 			[NSNumber numberWithBool:YES], AutoCompleteSearchesKey, 
 			[NSNumber numberWithBool:YES], QuitWhenClosingMainWindowKey, 
 			[NSNumber numberWithBool:NO], TriedToImportBlorKey,
-			[NSNumber numberWithBool:YES], HorizontalLayoutKey,
+//			[NSNumber numberWithBool:YES], HorizontalLayoutKey,
 			[NSNumber numberWithBool:YES], MakeURLsClickableKey,
 			[NSNumber numberWithBool:YES], HighlightSearchTermsKey, 
 			[NSNumber numberWithBool:YES], TableColumnsHaveBodyPreviewKey, 
@@ -839,7 +839,7 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
 	}
 }
 - (BOOL)horizontalLayout {
-	return [defaults boolForKey:HorizontalLayoutKey];
+    return YES; //[defaults boolForKey:HorizontalLayoutKey];
 }
 
 - (NSString*)lastSelectedPreferencesPane {
