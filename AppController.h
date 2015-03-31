@@ -54,7 +54,6 @@
 <NSToolbarDelegate, NSTableViewDelegate, NSWindowDelegate, NSTextFieldDelegate, NSTextViewDelegate>
 #endif
 {
-	IBOutlet NSMenuItem *fsMenuItem;
 	BOOL wasVert;
     BOOL wasDFVisible;
     BOOL fieldWasFirstResponder;
@@ -145,7 +144,6 @@ void outletObjectAwoke(id sender);
 - (IBAction)printNote:(id)sender;
 - (IBAction)tagNote:(id)sender;
 - (IBAction)importNotes:(id)sender;
-- (IBAction)switchViewLayout:(id)sender;
 
 - (IBAction)fieldAction:(id)sender;
 - (NoteObject*)createNoteIfNecessary;
@@ -195,8 +193,6 @@ void outletObjectAwoke(id sender);
 //- (void)showDualFieldView;
 - (BOOL)dualFieldIsVisible;
 - (IBAction)toggleCollapse:(id)sender;
-- (IBAction)switchFullScreen:(id)sender;
-- (BOOL)isInFullScreen;
 //- (IBAction)openFileInEditor:(id)sender;
 //- (NSArray *)getTxtAppList;
 //- (void)updateTextApp:(id)sender;

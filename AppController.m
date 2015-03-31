@@ -368,42 +368,14 @@ void outletObjectAwoke(id sender) {
 	}else{
         NSLog(@"su");
     }
-	// add elasticthreads' menuitems
-	NSMenuItem *theMenuItem = [[[NSMenuItem alloc] init] autorelease];
-	[theMenuItem setTarget:self];
-    //	NSMenu *notesMenu = [[[NSApp mainMenu] itemWithTag:NOTES_MENU_ID] submenu];
-	theMenuItem = [theMenuItem copy];
-    //	[statBarMenu insertItem:theMenuItem atIndex:4];
-	[theMenuItem release];
-    //theMenuItem = [[viewMenu itemWithTag:801] copy];
-	//[statBarMenu insertItem:theMenuItem atIndex:11];
-    //[theMenuItem release];
-    if(IsLeopardOrLater){
-        //theMenuItem =[viewMenu itemWithTag:314];
-        [fsMenuItem setEnabled:YES];
-        [fsMenuItem setHidden:NO];
-		
+
 #if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
-        if (IsLionOrLater) {
-            //  [window setCollectionBehavior:NSWindowCollectionBehaviorTransient|NSWindowCollectionBehaviorMoveToActiveSpace];
-            //
-            [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
-            //            [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenAuxiliary];
-            [NSApp setPresentationOptions:NSApplicationPresentationFullScreen];
-            
-            
-        }else{
-#endif
-            [fsMenuItem setTarget:self];
-            [fsMenuItem setAction:@selector(switchFullScreen:)];
-            
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
-        }
-#endif
-        theMenuItem = [fsMenuItem copy];
-        [statBarMenu insertItem:theMenuItem atIndex:12];
-        [theMenuItem release];
+    // handle fullscreen mode
+    if (IsLionOrLater) {
+        [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
+        [NSApp setPresentationOptions:NSApplicationPresentationFullScreen];
     }
+#endif
     
 	if (![prefsController showWordCount]) {
 		[wordCounter setHidden:NO];
@@ -791,35 +763,6 @@ terminateApp:
     }
 }
 
-- (IBAction)switchViewLayout:(id)sender {
-    if ([self isInFullScreen]) {
-        wasVert = YES;
-    }
-	ViewLocationContext ctx = [notesTableView viewingLocation];
-	ctx.pivotRowWasEdge = NO;
-	CGFloat colW = [notesSubview dimension];
-    if (![splitView isVertical]) {
-        colW += 30.0f;
-    }else{
-        colW -= 30.0f;
-    }
-	
-	[prefsController setHorizontalLayout:![prefsController horizontalLayout] sender:self];
-	[notationController updateDateStringsIfNecessary];
-	[self _configureDividerForCurrentLayout];
-    //	[notesTableView noteFirstVisibleRow];
-    [notesSubview setDimension:colW];
-	[notationController regenerateAllPreviews];
-	[splitView adjustSubviews];
-    
-	[notesTableView setViewingLocation:ctx];
-	[notesTableView makeFirstPreviouslyVisibleRowVisibleIfNecessary];
-	
-	[self updateNoteMenus];
-    
-	[notesTableView setBackgroundColor:backgrndColor];
-	[notesTableView setNeedsDisplay];
-}
 
 - (void)createFromSelection:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error {
 	if (!notationController || ![self addNotesFromPasteboard:pboard]) {
@@ -2264,7 +2207,6 @@ terminateApp:
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
-    [fsMenuItem release];
     [mainView release];
     [dualFieldView release];
     [wordCounter release];
@@ -2550,10 +2492,7 @@ terminateApp:
     [dualFieldView setAutoresizesSubviews:YES];
     [mainView addSubview:dualFieldView positioned:NSWindowAbove relativeTo:splitView];
 	NSRect dsvFrame = [dualSV frame];
-	dsvFrame.origin.y +=1.0;
-    if (![mainView isInFullScreenMode]) {
-        dsvFrame.origin.y +=4.0;
-    }
+	dsvFrame.origin.y +=5.0;
 	dsvFrame.size.width = roundf(wSize.width * 0.99);
 	dsvFrame.origin.x =roundf(wSize.width *0.005);
 	[dualSV setFrame:dsvFrame];
@@ -2567,7 +2506,7 @@ terminateApp:
 
 - (void)setDualFieldIsVisible:(BOOL)isVis{
     if ([self dualFieldIsVisible]!=isVis) {
-        if (IsLionOrLater||![mainView isInFullScreenMode]) {
+        if (IsLionOrLater) {
             [toolbar setVisible:isVis];
         }else{
             NSSize wSize = [mainView frame].size;
@@ -2610,13 +2549,7 @@ terminateApp:
 
 - (BOOL)dualFieldIsVisible{
     BOOL dfIsVis=NO;
-    if (!IsLionOrLater&&[mainView isInFullScreenMode]) {
-        if (dualFieldView) {
-            dfIsVis=![dualFieldView isHidden];
-        }
-    }else{
-        dfIsVis=[toolbar isVisible];
-    }
+    dfIsVis=[toolbar isVisible];
     return dfIsVis;
 }
 
@@ -2638,166 +2571,6 @@ terminateApp:
     [mainView setNeedsDisplay:YES];
 }
 
-#pragma mark fullscreen methods
-
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
-
-- (NSApplicationPresentationOptions)window:(NSWindow *)window
-      willUseFullScreenPresentationOptions:(NSApplicationPresentationOptions)rect{
-    
-    BOOL autohideTB=NO;
-    wasDFVisible=[self dualFieldIsVisible];
-    NSUInteger options=NSApplicationPresentationFullScreen | NSApplicationPresentationAutoHideMenuBar | NSApplicationPresentationAutoHideDock;
-    if (autohideTB) {
-        return options|NSApplicationPresentationAutoHideToolbar;
-    }
-    
-    return options;
-}
-
-- (void)windowWillEnterFullScreen:(NSNotification *)aNotification{
-    //   / [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
-    if (![splitView isVertical]) {
-        [self switchViewLayout:self];
-        wasVert = NO;
-    }else {
-        wasVert = YES;
-        //[splitView adjustSubviews];
-    }
-    
-}
-
-- (void)windowDidEnterFullScreen:(NSNotification *)aNotification{
-    
-    [self setDualFieldIsVisible:wasDFVisible];
-    
-//    [self performSelector:@selector(postToggleToolbar:) withObject:[NSNumber numberWithBool:wasDFVisible] afterDelay:0.0001];
-    [textView updateInsetAndForceLayout:YES];
-}
-
-- (NSArray *)customWindowsToExitFullScreenForWindow:(NSWindow *)aWindow{
-    fieldWasFirstResponder = [[NSArray arrayWithObjects:field,theFieldEditor, nil] containsObject:[aWindow firstResponder]];
-    return nil;
-}
-
-- (void)windowWillExitFullScreen:(NSNotification *)aNotification{
-    wasDFVisible=[self dualFieldIsVisible]&&(![notesSubview isCollapsed]);
-    if ((!wasVert)&&([splitView isVertical])) {
-        [self switchViewLayout:self];
-    }
-}
-- (void)windowDidExitFullScreen:(NSNotification *)notification{
-    //  [window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenAuxiliary|NSWindowCollectionBehaviorMoveToActiveSpace];
-    
-    [self setDualFieldIsVisible:wasDFVisible];
-//    [self performSelector:@selector(postToggleToolbar:) withObject:[NSNumber numberWithBool:wasDFVisible] afterDelay:0.0001];
-    if (wasDFVisible&&fieldWasFirstResponder) {
-        [window makeFirstResponder:field];
-    }
-    
-    [textView updateInsetAndForceLayout:YES];
-}
-
-- (void)postToggleToolbar:(NSNumber *)boolNum{
-    [self setDualFieldIsVisible:[boolNum boolValue]];
-}
-
-#endif
-
-- (BOOL)isInFullScreen{
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
-    if (IsLionOrLater) {
-        return (([window styleMask]&NSFullScreenWindowMask)>0);
-    }
-#endif
-    return [mainView isInFullScreenMode];
-    
-}
-
-- (IBAction)switchFullScreen:(id)sender
-{
-#if MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_7
-    if (IsLionOrLater) {
-        //        BOOL inFS=[self isInFullScreen];
-        [window toggleFullScreen:nil];
-        return;
-	}   
-#endif
-    if(IsLeopardOrLater){
-        
-        self.isEditing = NO;
-        NSResponder *currentResponder = [window firstResponder];
-        NSDictionary* options;
-        if (([[NSUserDefaults standardUserDefaults] boolForKey:@"ShowDockIcon"])&&(IsSnowLeopardOrLater)) {
-            options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:(NSApplicationPresentationAutoHideMenuBar | NSApplicationPresentationHideDock)],@"NSFullScreenModeApplicationPresentationOptions", nil];
-        }else {
-            options = [NSDictionary dictionaryWithObjectsAndKeys:nil];
-        }
-        CGFloat colW = [notesSubview dimension];
-        
-        wasDFVisible=[self dualFieldIsVisible];
-        if ([mainView isInFullScreenMode]) {
-            window = normalWindow;
-            [mainView exitFullScreenModeWithOptions:options];
-            
-            [notesSubview setDimension:colW];
-            [self setDualFieldInToolbar];
-            [splitView setFrameSize:[mainView frame].size];
-            if ((!wasVert)&&([splitView isVertical])) {
-                [self switchViewLayout:self];
-            }else{
-                [splitView adjustSubviews];
-            }
-            [window makeKeyAndOrderFront:self];
-        }else {
-            [mainView enterFullScreenMode:[window screen]  withOptions:options];
-            [notesSubview setDimension:colW];
-            [self setDualFieldInView];
-            if (![splitView isVertical]) {
-                [self switchViewLayout:self];
-                wasVert = NO;
-            }else {
-                wasVert = YES;
-                [splitView adjustSubviews];
-            }
-            normalWindow = window;
-            [normalWindow orderOut:self];
-            window = [mainView window];
-            //[NSApp setDelegate:self];
-            [notesTableView setDelegate:self];
-            [window setDelegate:self];
-            // [window setInitialFirstResponder:field];
-            [field setDelegate:self];
-            [textView setDelegate:self];
-            [splitView setDelegate:self];
-            NSSize wSize = [mainView frame].size;
-            wSize.height = [splitView frame].size.height;
-            [splitView setFrameSize:wSize];
-        }
-        [window setBackgroundColor:backgrndColor];
-        
-        [self setDualFieldIsVisible:wasDFVisible];
-        
-        [textView updateInsetAndForceLayout:YES];
-        if ([[currentResponder description] rangeOfString:@"_NSFullScreenWindow"].length>0){
-            currentResponder = textView;
-        }
-        if (([currentResponder isKindOfClass:[NSTextView class]])&&(![currentResponder isKindOfClass:[LinkingEditor class]])) {
-            currentResponder = field;
-        }
-        
-        [splitView setNextKeyView:notesTableView];
-        [field setNextKeyView:textView];
-        [textView setNextKeyView:field];
-        [window setAutorecalculatesKeyViewLoop:NO];
-        [window makeFirstResponder:currentResponder];
-        
-        [mainView setNeedsDisplay:YES];
-        if (![NSApp isActive]) {
-            [NSApp activateIgnoringOtherApps:YES];
-        }
-    }
-}
 
 #pragma mark color scheme methods
     

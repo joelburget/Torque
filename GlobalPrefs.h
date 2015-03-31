@@ -152,7 +152,7 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2);
 - (float)tableFontSize;
 - (void)setTableFontSize:(float)fontSize sender:(id)sender;
 
-- (void)setHorizontalLayout:(BOOL)value sender:(id)sender;
+//- (void)setHorizontalLayout:(BOOL)value sender:(id)sender;
 - (BOOL)horizontalLayout;
 
 - (BOOL)autoCompleteSearches;

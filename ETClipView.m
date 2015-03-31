@@ -25,7 +25,7 @@
 
 //
 -(void)setFrame:(NSRect)frameRect{
-    if (managesTextWidth||([[NSApp delegate]isInFullScreen])) {
+    if (managesTextWidth) {
         if (frameRect.size.width!=[self frame].size.width) {
             NSRect clipRect;
             NSRect docRect = [[self documentView] frame];

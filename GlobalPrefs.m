@@ -831,13 +831,13 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
     return [defaults boolForKey:TableIsReverseSortedKey];
 }
 
-- (void)setHorizontalLayout:(BOOL)value sender:(id)sender {
-	if ([self horizontalLayout] != value) {
-		[defaults setBool:value forKey:HorizontalLayoutKey];
-		
-		SEND_CALLBACKS();
-	}
-}
+//- (void)setHorizontalLayout:(BOOL)value sender:(id)sender {
+//	if ([self horizontalLayout] != value) {
+//		[defaults setBool:value forKey:HorizontalLayoutKey];
+//		
+//		SEND_CALLBACKS();
+//	}
+//}
 - (BOOL)horizontalLayout {
     return YES; //[defaults boolForKey:HorizontalLayoutKey];
 }

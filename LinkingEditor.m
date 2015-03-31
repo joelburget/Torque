@@ -2096,7 +2096,7 @@ static long (*GetGetScriptManagerVariablePointer())(short) {
 }
 
 - (void)updateInsetForFrame:(NSRect)frameRect andForceLayout:(BOOL)force{
-    if (managesTextWidth||([[NSApp delegate]isInFullScreen])) {
+    if (managesTextWidth) {
         [self setInsetForFrame:frameRect alwaysSet:force];
     }else{
         [self resetInset];
