@@ -765,8 +765,9 @@ terminateApp:
 - (void)_configureDividerForCurrentLayout {
     
     self.isEditing = NO;
-	BOOL horiz = [prefsController horizontalLayout];
-	if ([notesSubview isCollapsed]) {
+    BOOL horiz = NO;
+    horiz ? printf("horizontal = yes\n") : printf("horizontal = no\n");
+    if ([notesSubview isCollapsed]) {
 		[notesSubview expand];
 		[splitView setVertical:horiz];
 		[splitView setDividerThickness:7.0f];
