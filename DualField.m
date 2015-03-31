@@ -39,7 +39,7 @@
 		[self setWraps:YES];
 		[self setPlaceholderString:NSLocalizedString(@"Search or Create", @"placeholder text in search/create field")];
 		
-		[self setFocusRingType:NSFocusRingTypeExterior];
+		[self setFocusRingType:NSFocusRingTypeNone];
 		
 		clearButtonState = snapbackButtonState = BUTTON_HIDDEN;
 		
@@ -199,7 +199,9 @@
 	
 	[self setDrawsBackground:NO];
 	[self setBordered:NO];
-	[self setBezeled:NO];
+	//[self setBezeled:NO];
+    [[self cell] setBezelStyle: NSTextFieldRoundedBezel];
+
 	[self setFocusRingType:NSFocusRingTypeExterior];
 			
 	[myCell setAllowsUndo:NO];
@@ -423,64 +425,80 @@
 }
 
 - (void)drawRect:(NSRect)rect {
-//	[super drawRect:rect];
-	
-	NSWindow *window = [self window];
-	BOOL isActiveWin = [window isMainWindow];
-	
-	[NSGraphicsContext saveGraphicsState];
-	[[NSGraphicsContext currentContext] setShouldAntialias:NO];
-	
-	NSRect tBounds = [self bounds];
-	
-	[[NSColor whiteColor] set];
-	NSRectFill(NSInsetRect(tBounds, 5, 1));
-	
-	NSImage *leftCap = [NSImage imageNamed: isActiveWin ? @"DFCapLeftRounded" : @"DFCapLeftRoundedInactive"];
-	[leftCap setFlipped:YES];
-	NSRect leftImageRect = NSMakeRect(0, 0, [leftCap size].width, [leftCap size].height);
-	[leftCap drawInRect:leftImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-	
-	NSImage *rightCap = [NSImage imageNamed: isActiveWin ? @"DFCapRight" : @"DFCapRightInactive"];
-	[rightCap setFlipped:YES];
-	NSRect rightImageRect = NSMakeRect(tBounds.size.width - [rightCap size].width, 0, [rightCap size].width, [rightCap size].height);
-	[rightCap drawInRect:rightImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+    
+    NSRect blackOutlineFrame = NSMakeRect(0.0, 0.0, [self bounds].size.width, [self bounds].size.height-1.0);
+    NSGradient *gradient = nil;
+    if ([NSApp isActive]) {
+        gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0]];
+    }
+    else {
+        gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0]];
+    }
+    
+    [gradient drawInBezierPath:[NSBezierPath bezierPathWithRoundedRect:blackOutlineFrame xRadius:10 yRadius:10] angle:90];
 
-	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.31f : 0.62f alpha:1.0f] set];
-	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + .5) 
-							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + .5)];
-	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.882f : 0.886f alpha:1.0f] set];
-	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + 1.5) 
-							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + 1.5)];
-	
-	
-	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.447f : 0.627f alpha:1.0f] set];
-	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + tBounds.size.height - 1.5) 
-							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + tBounds.size.height - 1.5)];
-	[[NSColor colorWithDeviceWhite: 1.0 alpha:0.39f] set];
-	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + tBounds.size.height ) 
-							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + tBounds.size.height )];
-	
-	NSImage *docIcon = [NSImage imageNamed: showsDocumentIcon ? @"Pencil" : @"Search" ];
-	[docIcon setFlipped:YES];
-	NSRect docImageRect = NSMakeRect(BORDER_LEFT_OFFSET, BORDER_TOP_OFFSET, [docIcon size].width, [docIcon size].height);
-	[docIcon drawInRect:docImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-	
-	[NSGraphicsContext restoreGraphicsState];
-	
-	//drawWithFrame: would make sense to override, but this works, too
-	[[self cell] drawWithFrame:NSMakeRect(0, 0, NSWidth(tBounds), NSHeight(tBounds)) inView:self];
-	
+    
+//	[super drawRect:rect];
+//	
+//	NSWindow *window = [self window];
+//	BOOL isActiveWin = [window isMainWindow];
+//	
+//	[NSGraphicsContext saveGraphicsState];
+//	[[NSGraphicsContext currentContext] setShouldAntialias:NO];
+//	
+	NSRect tBounds = [self bounds];
+//	
+//	[[NSColor whiteColor] set];
+//	NSRectFill(NSInsetRect(tBounds, 5, 1));
+//	
+//	NSImage *leftCap = [NSImage imageNamed: isActiveWin ? @"DFCapLeftRounded" : @"DFCapLeftRoundedInactive"];
+//	[leftCap setFlipped:YES];
+//	NSRect leftImageRect = NSMakeRect(0, 0, [leftCap size].width, [leftCap size].height);
+//	[leftCap drawInRect:leftImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+//	
+//	NSImage *rightCap = [NSImage imageNamed: isActiveWin ? @"DFCapRight" : @"DFCapRightInactive"];
+//	[rightCap setFlipped:YES];
+//	NSRect rightImageRect = NSMakeRect(tBounds.size.width - [rightCap size].width, 0, [rightCap size].width, [rightCap size].height);
+//	[rightCap drawInRect:rightImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+
+//	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.31f : 0.62f alpha:1.0f] set];
+//	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + .5) 
+//							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + .5)];
+//	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.882f : 0.886f alpha:1.0f] set];
+//	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + 1.5) 
+//							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + 1.5)];
+//	
+//	
+//	[[NSColor colorWithDeviceWhite: isActiveWin ? 0.447f : 0.627f alpha:1.0f] set];
+//	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + tBounds.size.height - 1.5) 
+//							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + tBounds.size.height - 1.5)];
+//	[[NSColor colorWithDeviceWhite: 1.0 alpha:0.39f] set];
+//	[NSBezierPath strokeLineFromPoint:NSMakePoint(tBounds.origin.x + [leftCap size].width, tBounds.origin.y + tBounds.size.height ) 
+//							  toPoint:NSMakePoint(tBounds.size.width - [rightCap size].width, tBounds.origin.y + tBounds.size.height )];
+//	
+//	NSImage *docIcon = [NSImage imageNamed: showsDocumentIcon ? @"Pencil" : @"Search" ];
+//	[docIcon setFlipped:YES];
+//	NSRect docImageRect = NSMakeRect(BORDER_LEFT_OFFSET, BORDER_TOP_OFFSET, [docIcon size].width, [docIcon size].height);
+//	[docIcon drawInRect:docImageRect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+//	
+//	[NSGraphicsContext restoreGraphicsState];
+//
+//	//drawWithFrame: would make sense to override, but this works, too
+//	[[self cell] drawWithFrame:NSMakeRect(0, 0, NSWidth(tBounds), NSHeight(tBounds)) inView:self];
+//	
 	if (IsLeopardOrLater) {
 		//ALERT: TEMPORARY WORK-AROUND FOR TIGER FOCUS RING BUILDUP: DO NOT DRAW FOCUS RING ON TIGER
-		if ([self currentEditor] && isActiveWin) {
+        //TODO(viraj): figure out if we do want a focus ring
+//		if ([self currentEditor] &&
+        if ([self currentEditor]) {
+
 			//draw focus ring
 			[NSGraphicsContext saveGraphicsState];
-			NSSetFocusRingStyle(NSFocusRingOnly);
+			NSSetFocusRingStyle(NSFocusRingTypeNone);
 			NSRect focusRect = NSInsetRect(tBounds, 0.0f, 0.5f);
-			focusRect.origin.y -= 0.5f;
+//			focusRect.origin.y -= 0.5f;
 			//drawing could be sped up by a measurable amount if this were cached in a (partially transparent) image
-			[[NSBezierPath bezierPathWithRoundRectInRect:focusRect radius:1.0f] fill];
+            //[[NSBezierPath bezierPathWithRoundRectInRect:focusRect radius: 1.0f] fill];
 			[NSGraphicsContext restoreGraphicsState];
 		}
 	}	
