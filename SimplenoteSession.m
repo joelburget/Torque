@@ -263,7 +263,7 @@ static void SNReachabilityCallback(SCNetworkReachabilityRef	target, SCNetworkCon
 		reachabilityFailed = NO;
 
 		if (![(emailAddress = [aUserString retain]) length]) {
-			NSLog(@"%s: empty email address", _cmd);
+			NSLog(@"%@: empty email address", NSStringFromSelector(_cmd));
 			return nil;
 		}
 		if (![(password = [aPassString retain]) length]) {
@@ -470,7 +470,7 @@ static void SNReachabilityCallback(SCNetworkReachabilityRef	target, SCNetworkCon
 	if ([unsyncedServiceNotes count] > 0) {
 		
 		if ([listFetcher isRunning] || [changesFetcher isRunning]) {
-			NSLog(@"%s: not pushing because a full sync index is in progress", _cmd);
+			NSLog(@"%@: not pushing because a full sync index is in progress", NSStringFromSelector(_cmd));
 			return NO;
 		}
 		
@@ -756,7 +756,7 @@ static void SNReachabilityCallback(SCNetworkReachabilityRef	target, SCNetworkCon
 	//because there could be many notes missing
 	//although notes that encountered errors normally (entriesInError w/o stopping) will potentially be duplicated anyway.
 	if ([collector collectionStoppedPrematurely]) {
-		NSLog(@"%s: not merging notes because collection was cancelled", _cmd);
+		NSLog(@"%@: not merging notes because collection was cancelled", NSStringFromSelector(_cmd));
 		return;
 	}
 	NSMutableArray *entries = [NSMutableArray arrayWithCapacity:[[collector entriesCollected] count]];

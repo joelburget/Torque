@@ -74,7 +74,7 @@ replace:
 																 encoding:CFStringConvertEncodingToNSStringEncoding(bodyPreviewEncoding) freeWhenDone:YES];
 	if (!truncatedBodyString) {
 		free(bodyPreviewBuffer);
-		NSLog(@"can't create cfstring from '%@' (cstr lens: %lu/%d) with encoding %u (fastest = %u)", self, (unsigned long)bodyCharCount, usedBufLen, bodyPreviewEncoding, CFStringGetFastestEncoding((CFStringRef)self)); 
+		NSLog(@"can't create cfstring from '%@' (cstr lens: %lu/%ld) with encoding %u (fastest = %u)", self, (unsigned long)bodyCharCount, usedBufLen, bodyPreviewEncoding, CFStringGetFastestEncoding((CFStringRef)self)); 
 		return nil;
 	}
 	return [truncatedBodyString autorelease];

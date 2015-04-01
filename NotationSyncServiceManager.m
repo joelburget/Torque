@@ -472,7 +472,7 @@ ended:
 			return NO;			
 	}
 	
-	NSLog(@"%s: unhandled case (res: %ld)!", _cmd, (long)res);
+	NSLog(@"%@: unhandled case (res: %ld)!", NSStringFromSelector(_cmd), (long)res);
 	return YES;
 }
 

@@ -237,7 +237,7 @@
 	currentByteOffset += sizeof(titleBytesLength);
 	
 	//read/decrypt title
-	ASSERT_CAN_READ_BYTE_COUNT(titleBytesLength);
+	ASSERT_CAN_READ_BYTE_COUNT(sizeof(titleBytesLength));
 	[self decryptNextBytesOfLength:titleBytesLength];
 	NSData *titleData = [NSData dataWithBytesNoCopy:[blorData mutableBytes] + currentByteOffset length:titleBytesLength freeWhenDone:NO];
 	NSString *titleString = [[NSString alloc] initWithData:titleData encoding:NSUnicodeStringEncoding];

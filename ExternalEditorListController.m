@@ -279,6 +279,7 @@ static ExternalEditorListController* sharedInstance = nil;
 		
 		[self setDefaultEditor:ed];
     }
+    
 	return;
 errorReturn:
 	NSBeep();

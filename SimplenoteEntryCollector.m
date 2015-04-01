@@ -39,7 +39,7 @@
 		entriesInError = [[NSMutableArray alloc] init];
 		
 		if (![simperiumToken length] || ![entriesToCollect count]) {
-			NSLog(@"%s: missing parameters", _cmd);
+			NSLog(@"%@: missing parameters", NSStringFromSelector(_cmd));
 			return nil;
 		}
 	}
@@ -153,7 +153,7 @@
 	NSURL *url = [fetcher requestURL];
 	int index = [[url pathComponents] indexOfObject:@"i"];
 	NSString *key;
-	if (index > 0 && index+1 < [[url pathComponents] count]) {
+	if (index > 0 && index+1 < (int)[[url pathComponents] count]) {
 		key = [[url pathComponents] objectAtIndex:(index+1)];
 	}
 
@@ -194,7 +194,7 @@
 - (void)syncResponseFetcher:(SyncResponseFetcher*)fetcher receivedData:(NSData*)data returningError:(NSString*)errString {
 	
 	if (errString) {
-		NSLog(@"%s: collector-%@ returned %@", _cmd, fetcher, errString);
+		NSLog(@"%@: collector-%@ returned %@", NSStringFromSelector(_cmd), fetcher, errString);
 		id obj = [fetcher representedObject];
 		if (obj) {
 			[entriesInError addObject:[NSDictionary dictionaryWithObjectsAndKeys: obj, @"NoteObject", 
@@ -249,7 +249,7 @@
 		//set modification date when updating
 		//need to check for success when deleting
 		if (![self respondsToSelector:opSEL]) {
-			NSLog(@"%@ doesn't respond to %s", self, opSEL);
+			NSLog(@"%@ doesn't respond to %@", self, NSStringFromSelector(opSEL));
 			return nil;
 		}
 		fetcherOpSEL = opSEL;
@@ -396,7 +396,7 @@
 	NSString *keyString = nil;
 	NSURL *url = [fetcher requestURL];
 	int index = [[url pathComponents] indexOfObject:@"i"];
-	if (index > 0 && index+1 < [[url pathComponents] count]) {
+	if (index > 0 && index+1 < (int)[[url pathComponents] count]) {
 		keyString = [[url pathComponents] objectAtIndex:(index+1)];
 	}
 	NSInteger version = 0;
@@ -477,11 +477,11 @@
 				[[[(NoteObject *)aNote delegate] delegate] contentsUpdatedForNote:aNote];
 			}
 		} else {
-			NSLog(@"%s called with unknown opSEL: %s", _cmd, fetcherOpSEL);
+			NSLog(@"%@ called with unknown opSEL: %@", NSStringFromSelector(_cmd), NSStringFromSelector(fetcherOpSEL));
 		}
 		
 	} else {
-		NSLog(@"Hmmm. Fetcher %@ doesn't have a represented object. op = %s", fetcher, fetcherOpSEL);
+		NSLog(@"Hmmm. Fetcher %@ doesn't have a represented object. op = %@", fetcher, NSStringFromSelector(fetcherOpSEL));
 	}
 	[result setObject:keyString forKey:@"key"];
 	

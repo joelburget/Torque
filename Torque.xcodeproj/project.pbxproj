@@ -2339,6 +2339,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B5D38BA3F5A8E410399C30B /* Pods.development.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2507,6 +2508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC6EB35A3E4114358C85FB6D /* Pods.forbuilding.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

@@ -210,7 +210,7 @@
 // Above webView methods from <http://stackoverflow.com/questions/2288582/embedded-webkit-script-callbacks-how/2293305#2293305>
 
 - (void)webView:(WebView *)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener {
-	NSString *targetURL = [[request URL] scheme];
+//	NSString *targetURL = [[request URL] scheme];
 
     if (![[actionInformation objectForKey:@"WebActionNavigationTypeKey"] isEqualToNumber:[NSNumber numberWithInt:5]]) {
 				[[NSWorkspace sharedWorkspace] openURL:[request URL]];
@@ -482,7 +482,7 @@
 	NSData * responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 	NSString * responseString = [[[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding] autorelease];
 	NSLog(@"RESPONSE STRING: %@", responseString);
-	NSLog(@"%d",response.statusCode);
+	NSLog(@"%ld",(long)response.statusCode);
 	shareURL = [[NSString stringWithString:responseString] retain];
 	if (response.statusCode == 200) {
 		[self showShareURL:[NSString stringWithFormat:@"View %@",shareURL] isError:NO];

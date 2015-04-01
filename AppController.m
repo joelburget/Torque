@@ -419,10 +419,10 @@ void outletObjectAwoke(id sender) {
 
 	if (aliasData) {
 	    newNotation = [[NotationController alloc] initWithAliasData:aliasData error:&err];//autorelease]
-	    subMessage = NSLocalizedString(@"Please choose a different folder in which to store your notes.",nil);
+	    subMessage = NSLocalizedString(@"Please choose a different folder in which to store your notes.", nil);
 	} else {
 	    newNotation = [[NotationController alloc] initWithDefaultDirectoryReturningError:&err];
-	    subMessage = NSLocalizedString(@"Please choose a folder in which your notes will be stored.",nil);
+	    subMessage = NSLocalizedString(@"Please choose a folder in which your notes will be stored.", nil);
 	}
 	//no need to display an alert if the error wasn't real
 	if (err == kPassCanceledErr)
@@ -443,7 +443,7 @@ void outletObjectAwoke(id sender) {
 	    NSString *reason = [NSString reasonStringFromCarbonFSError:err];
 
 	    if (NSRunAlertPanel([NSString stringWithFormat:NSLocalizedString(@"Unable to initialize notes database in \n%@ because %@.",nil), location, reason],
-							subMessage, NSLocalizedString(@"Choose another folder",nil),NSLocalizedString(@"Quit",nil),NULL) == NSAlertDefaultReturn) {
+							subMessage, NSLocalizedString(@"Choose another folder", nil), NSLocalizedString(@"Quit",nil),NULL) == NSAlertDefaultReturn) {
 			//show nsopenpanel, defaulting to current default notes dir
 			FSRef notesDirectoryRef;
 		showOpenPanel:
@@ -494,8 +494,6 @@ void outletObjectAwoke(id sender) {
 	 @selector(setAutoCompleteSearches:sender:),@selector(setUseETScrollbarsOnLion:sender:), nil];   //when to tell notationcontroller to build its title-prefix connections
 
 	[self performSelector:@selector(runDelayedUIActionsAfterLaunch) withObject:nil afterDelay:0.0];
-
-
 
 	return;
 terminateApp:
@@ -652,19 +650,19 @@ terminateApp:
                 return NO;
             }
         }
-	} else if ((selector == @selector(toggleFullScreen:))||(selector == @selector(switchFullScreen:))) {
-
-        if (IsLeopardOrLater) {
-
-            if([NSApp presentationOptions]>0){
-                [menuItem setTitle:NSLocalizedString(@"Exit Full Screen",@"menu item title for exiting fullscreen")];
-            }else{
-
-                [menuItem setTitle:NSLocalizedString(@"Enter Full Screen",@"menu item title for entering fullscreen")];
-
-            }
-
-        }
+//	} else if ((selector == @selector(toggleFullScreen:))||(selector == @selector(switchFullScreen:))) {
+//
+//        if (IsLeopardOrLater) {
+//
+//            if([NSApp presentationOptions]>0){
+//                [menuItem setTitle:NSLocalizedString(@"Exit Full Screen",@"menu item title for exiting fullscreen")];
+//            }else{
+//
+//                [menuItem setTitle:NSLocalizedString(@"Enter Full Screen",@"menu item title for entering fullscreen")];
+//
+//            }
+//
+//        }
 
 
 	} else if (selector == @selector(fixFileEncoding:)) {
@@ -705,21 +703,21 @@ terminateApp:
 		 NSLocalizedString(@"Hide Note Previews in Title", @"menu item in the View menu to turn off note-body previews in the Title column") :
 		 NSLocalizedString(@"Show Note Previews in Title", @"menu item in the View menu to turn on note-body previews in the Title column")];
 	}
-	menuIndex = [viewMenu indexOfItemWithTarget:self andAction:@selector(switchViewLayout:)];
-	NSMenuItem *switchLayoutItem = nil;
-	NSString *switchStr = [prefsController horizontalLayout] ?
-	NSLocalizedString(@"Switch to Vertical Layout", @"title of alternate view layout menu item") :
-	NSLocalizedString(@"Switch to Horizontal Layout", @"title of view layout menu item");
-
-	if (menuIndex > -1 && (switchLayoutItem = [viewMenu itemAtIndex:menuIndex])) {
-		[switchLayoutItem setTitle:switchStr];
-	}
-	// add to elasticthreads' statusbar menu
-	menuIndex = [statBarMenu indexOfItemWithTarget:self andAction:@selector(switchViewLayout:)];
-	if (menuIndex>-1) {
-		NSMenuItem *anxItem = [statBarMenu itemAtIndex:menuIndex];
-		[anxItem setTitle:switchStr];
-	}
+//	menuIndex = [viewMenu indexOfItemWithTarget:self andAction:@selector(switchViewLayout:)];
+//	NSMenuItem *switchLayoutItem = nil;
+//	NSString *switchStr = [prefsController horizontalLayout] ?
+//	NSLocalizedString(@"Switch to Vertical Layout", @"title of alternate view layout menu item") :
+//	NSLocalizedString(@"Switch to Horizontal Layout", @"title of view layout menu item");
+//
+//	if (menuIndex > -1 && (switchLayoutItem = [viewMenu itemAtIndex:menuIndex])) {
+//		[switchLayoutItem setTitle:switchStr];
+//	}
+//	// add to elasticthreads' statusbar menu
+//	menuIndex = [statBarMenu indexOfItemWithTarget:self andAction:@selector(switchViewLayout:)];
+//	if (menuIndex>-1) {
+//		NSMenuItem *anxItem = [statBarMenu itemAtIndex:menuIndex];
+//		[anxItem setTitle:switchStr];
+//	}
 }
 
 - (void)_forceRegeneratePreviewsForTitleColumn {
@@ -751,10 +749,10 @@ terminateApp:
             [self setDualFieldIsVisible:YES];
         }
 	}
-
-    if (horiz) {
-        [splitSubview setMinDimension:100.0 andMaxDimension:0.0];
-    }
+//
+//    if (horiz) {
+//        [splitSubview setMinDimension:100.0 andMaxDimension:0.0];
+//    }
 }
 
 

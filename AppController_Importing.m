@@ -314,7 +314,7 @@
 			if (url) {
         NSString *linkFormat = @"<%@>%s";
         NSString *pathString = [url absoluteString];
-        NSLog(@"%s",pathString);
+        NSLog(@"%@",pathString);
         if ([pathString hasSuffix:@"jpg"]   || 
             [pathString hasSuffix:@"jpeg"]  ||
             [pathString hasSuffix:@"gif"]   ||

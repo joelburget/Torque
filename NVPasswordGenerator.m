@@ -87,7 +87,7 @@ static const char nvSymbolSet[] = "!@#$%^&*()-+=?/<>";
 + (NSArray*)suggestions
 {
     enum {numSuggestions = 4};
-    const SEL methods[numSuggestions] = {@selector(strong), @selector(medium), @selector(light), @selector(lightNumeric)};
+//    const SEL methods[numSuggestions] = {@selector(strong), @selector(medium), @selector(light), @selector(lightNumeric)};
     
     NSString* suggest[numSuggestions];
     #if MAC_OS_X_VERSION_MIN_REQUIRED >= MAC_OS_X_VERSION_10_6
