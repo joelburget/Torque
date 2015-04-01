@@ -20,7 +20,7 @@
 #import "NSString_NV.h"
 #import "GlobalPrefs.h"
 
-@implementation NSString (CustomTruncation)
+@implementation NSString (CustomTruncvoidvoidvoidvoidation)
 
 static NSMutableParagraphStyle *LineBreakingStyle();
 static NSDictionary *GrayTextAttributes();
@@ -56,7 +56,7 @@ static size_t EstimatedCharCountForWidth(float upToWidth);
 			}
 			if (!CFStringGetBytes((CFStringRef)self, CFRangeMake(0, bodyCharCount), bodyPreviewEncoding, ' ', FALSE, 
 								  (UInt8 *)bodyPreviewBuffer, bodyCharCount + 1, &usedBufLen)) {
-				NSLog(@"can't get utf8 string from '%@' (charcount: %u)", self, bodyCharCount);
+				NSLog(@"can't get utf8 string from '%@' (charcount: %lu)", self, (unsigned long)bodyCharCount);
 				free(bodyPreviewBuffer);
 				return nil;
 			}
@@ -74,7 +74,7 @@ replace:
 																 encoding:CFStringConvertEncodingToNSStringEncoding(bodyPreviewEncoding) freeWhenDone:YES];
 	if (!truncatedBodyString) {
 		free(bodyPreviewBuffer);
-		NSLog(@"can't create cfstring from '%@' (cstr lens: %u/%d) with encoding %u (fastest = %u)", self, bodyCharCount, usedBufLen, bodyPreviewEncoding, CFStringGetFastestEncoding((CFStringRef)self)); 
+		NSLog(@"can't create cfstring from '%@' (cstr lens: %lu/%d) with encoding %u (fastest = %u)", self, (unsigned long)bodyCharCount, usedBufLen, bodyPreviewEncoding, CFStringGetFastestEncoding((CFStringRef)self)); 
 		return nil;
 	}
 	return [truncatedBodyString autorelease];

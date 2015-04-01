@@ -178,7 +178,7 @@
 			return nil;
 			
 		if ([blorData length] < 28) {
-			NSLog(@"read data is too small (%d) to hold any notes!", [blorData length]);
+			NSLog(@"read data is too small (%lu) to hold any notes!", (unsigned long)[blorData length]);
 			return nil;
 		}
 		

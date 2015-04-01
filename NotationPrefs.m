@@ -719,7 +719,7 @@ NSMutableDictionary *ServiceAccountDictInit(NotationPrefs *prefs, NSString* serv
 	if ([self syncNotesShouldMergeForServiceName:serviceName] != shouldMerge) {
 		NSString *username = [accountDict objectForKey:@"username"];
 		if (username) {
-			NSLog(@"%s: %d, %@", _cmd, shouldMerge, username);
+			NSLog(@"%@: %d, %@", NSStringFromSelector(_cmd), shouldMerge, username);
 			if (shouldMerge) {
 				[accountDict setObject:username forKey:@"shouldmerge"];
 			} else {
@@ -727,7 +727,7 @@ NSMutableDictionary *ServiceAccountDictInit(NotationPrefs *prefs, NSString* serv
 			}
 			preferencesChanged = YES;
 		} else {
-			NSLog(@"%s: no username found in %@", serviceName);
+			NSLog(@"%@: no username found in %@", NSStringFromSelector(_cmd), serviceName);
 		}
 	}
 }
@@ -810,7 +810,7 @@ NSMutableDictionary *ServiceAccountDictInit(NotationPrefs *prefs, NSString* serv
 			}	
 			if (itemRef) {
 				OSStatus err = SecKeychainItemDelete(itemRef);
-				if (err != noErr) NSLog(@"Error deleting keychain item for service %@: %d, serviceName", err);
+				if (err != noErr) NSLog(@"Error deleting keychain item for service %@: %d", serviceName, (int)err);
 				CFRelease(itemRef);
 			}
 		} else {

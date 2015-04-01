@@ -304,7 +304,7 @@
 	} else {
 		NSUInteger v = [[info objectForKey:@"version"] integerValue];
 		if (v > 0) {
-			noteURL = [SimplenoteSession simperiumURLWithPath:[NSString stringWithFormat:@"/Note/i/%@/v/%u", [info objectForKey:@"key"], v] parameters:params];
+			noteURL = [SimplenoteSession simperiumURLWithPath:[NSString stringWithFormat:@"/Note/i/%@/v/%lu", [info objectForKey:@"key"], (unsigned long)v] parameters:params];
 		} else {
 			noteURL = [SimplenoteSession simperiumURLWithPath:[NSString stringWithFormat:@"/Note/i/%@", [info objectForKey:@"key"]] parameters:params];
 		}

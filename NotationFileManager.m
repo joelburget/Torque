@@ -523,7 +523,7 @@ terminate:
 	if (noErr != err) return nil;
 	
     if ((err = FSRefReadData(childRef, BlockSizeForNotation(self), &fileSize, (void**)&notesDataPtr, noCacheMask)) != noErr) {
-		NSLog(@"%s: error %d", _cmd, err);
+		NSLog(@"%@: error %d", NSStringFromSelector(_cmd), err);
 		return nil;
 	}    
     if (!notesDataPtr)

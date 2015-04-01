@@ -228,7 +228,7 @@ static float defaultTextPadding(void) {
 	[pageStorage addLayoutManager:lm];
 	[lm release]; // owned by the text storage
 	
-	NSAttributedString *formfeed = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%C", NSFormFeedCharacter] attributes:nil];
+	NSAttributedString *formfeed = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%C", (unichar)NSFormFeedCharacter] attributes:nil];
 	NSFont *bodyFont = [[GlobalPrefs defaultPrefs] noteBodyFont];
 	
 	unsigned i, totalPageCount = 0; //[tableView numberOfSelectedRows];

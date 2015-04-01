@@ -101,7 +101,7 @@ static inline CGFloat fMAX(CGFloat a,CGFloat b) {
 		for (i=0;i<subcount;i++) {
 			RBSplitView* sv = [[subviews objectAtIndex:i] asSplitView];
 			if (sv) {
-				NSString* subst = clear?@"":[aString stringByAppendingFormat:@"[%d]",i];
+				NSString* subst = clear?@"":[aString stringByAppendingFormat:@"[%lu]",(unsigned long)i];
 				[sv setAutosaveName:subst recursively:YES];
 			}
 		}
@@ -194,7 +194,7 @@ static inline CGFloat fMAX(CGFloat a,CGFloat b) {
 // be negative for collapsed subviews), all separated by blanks.
 - (NSString*)stringWithSavedState {
 	NSArray* subviews = [self subviews];
-	NSMutableString* result = [NSMutableString stringWithFormat:@"%d",[subviews count]];
+	NSMutableString* result = [NSMutableString stringWithFormat:@"%lu",(unsigned long)[subviews count]];
 	for (RBSplitSubview* sub in [self subviews]){
 		double size = [sub dimension];
 		if ([sub isCollapsed]) {

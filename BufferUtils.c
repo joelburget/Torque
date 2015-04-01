@@ -405,8 +405,8 @@ CFStringRef CreateRandomizedFileName() {
 	psn.lowLongOfPSN = (unsigned long)&psn;
     }
     
-    CFStringRef name = CFStringCreateWithFormat(kCFAllocatorDefault, NULL, CFSTR(".%lu%lu-%d-%d"), 
-						psn.highLongOfPSN, psn.lowLongOfPSN, (int)CFAbsoluteTimeGetCurrent(), sequence);
+    CFStringRef name = CFStringCreateWithFormat(kCFAllocatorDefault, NULL, CFSTR(".%u%u-%d-%d"), 
+						(unsigned int)psn.highLongOfPSN, (unsigned int)psn.lowLongOfPSN, (int)CFAbsoluteTimeGetCurrent(), sequence);
     
     return name;
 }

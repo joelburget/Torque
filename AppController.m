@@ -475,7 +475,7 @@ void outletObjectAwoke(id sender) {
 	}
 
 	if (URLToInterpretOnLaunch) {
-		[self interpretNVURL:[URLToInterpretOnLaunch autorelease]];
+		[self interpretNVURL:(NSURL *)[URLToInterpretOnLaunch autorelease]];
 		URLToInterpretOnLaunch = nil;
 	}
 
@@ -1068,11 +1068,11 @@ terminateApp:
 		//what if the app is switched-to in another way? then the last-stored spaceSwitchCtx will cause us to return to the wrong app
 		//unfortunately this notification occurs only after NV has become the front process, but we can still verify the space number
 
-		if (thisSpaceSwitchCtx.userSpace != spaceSwitchCtx.userSpace ||
-			thisSpaceSwitchCtx.windowSpace != spaceSwitchCtx.windowSpace) {
-			//forget the last space-switch info if it's effectively different from how we're switching into the app now
-			bzero(&spaceSwitchCtx, sizeof(SpaceSwitchingContext));
-		}
+//		if (thisSpaceSwitchCtx.userSpace != spaceSwitchCtx.userSpace ||
+//			thisSpaceSwitchCtx.windowSpace != spaceSwitchCtx.windowSpace) {
+//			//forget the last space-switch info if it's effectively different from how we're switching into the app now
+//			bzero(&spaceSwitchCtx, sizeof(SpaceSwitchingContext));
+//		}
 	}
 }
 
@@ -2603,7 +2603,7 @@ terminateApp:
             NSUInteger theCount = [[[textView textStorage] words] count];
 
             if (theCount > 0) {
-                [wordCounter setStringValue:[[NSString stringWithFormat:@"%d", theCount] stringByAppendingString:@" words"]];
+                [wordCounter setStringValue:[[NSString stringWithFormat:@"%lu", (unsigned long)theCount] stringByAppendingString:@" words"]];
             }else {
                 [wordCounter setStringValue:@""];
             }
