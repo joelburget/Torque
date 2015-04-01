@@ -17,6 +17,8 @@
 #import "NotationController.h"
 #import "NotesTableView.h"
 #import "Spaces.h"
+#import <INAppStoreWindow/INAppStoreWindow.h>
+
 
 @class LinkingEditor;
 @class EmptyView;
@@ -83,7 +85,7 @@
   IBOutlet LinkingEditor *textView;
 	IBOutlet EmptyView *editorStatusView;
 	IBOutlet NSMenuItem *sparkleUpdateItem;
-  IBOutlet NSWindow *window;
+  IBOutlet INAppStoreWindow *window;
 	IBOutlet NSPanel *syncWaitPanel;
 	IBOutlet NSProgressIndicator *syncWaitSpinner;
 	NSToolbar *toolbar;
@@ -175,7 +177,7 @@ void outletObjectAwoke(id sender);
 - (IBAction)showPreferencesWindow:(id)sender;
 - (IBAction)toggleNVActivation:(id)sender;
 - (IBAction)bringFocusToControlField:(id)sender;
-- (NSWindow*)window;
+- (INAppStoreWindow*)window;
 
 //elasticwork
 //- (void)setIsEditing:(BOOL)inBool inCell:(NSCell *)theCell;

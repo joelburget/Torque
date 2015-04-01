@@ -19,11 +19,16 @@
 #import "AppController.h"
 #import "BookmarksController.h"
 
+#define LEFT_OFFSET 60.0
+
+
 #define BORDER_TOP_OFFSET 3.0
 #define BORDER_LEFT_OFFSET 3.0
 #define MAX_STATE_IMG_DIM 16.0
 #define CLEAR_BUTTON_IMG_DIM 16.0
-#define TEXT_LEFT_OFFSET (MAX_STATE_IMG_DIM + BORDER_LEFT_OFFSET)
+#define TEXT_LEFT_OFFSET (MAX_STATE_IMG_DIM + BORDER_LEFT_OFFSET + LEFT_OFFSET)
+
+
 
 @implementation DualFieldCell
 
@@ -86,7 +91,7 @@
 	textRect.origin.y += BORDER_TOP_OFFSET;
 	textRect.origin.x += TEXT_LEFT_OFFSET;
 	textRect.size.height = MAX_STATE_IMG_DIM;
-	textRect.size.width = rect.size.width - 23;	
+	textRect.size.width = rect.size.width - 23 - LEFT_OFFSET;
 	//if ([self clearButtonIsVisible]) {
 		textRect.size.width -= CLEAR_BUTTON_IMG_DIM - 1.0;
 	//}
@@ -424,9 +429,10 @@
 	return [image autorelease];
 }
 
+
 - (void)drawRect:(NSRect)rect {
     
-    NSRect blackOutlineFrame = NSMakeRect(0.0, 0.0, [self bounds].size.width, [self bounds].size.height-1.0);
+    NSRect blackOutlineFrame = NSMakeRect(LEFT_OFFSET, 0.0, [self bounds].size.width - LEFT_OFFSET, [self bounds].size.height-1.0);
     NSGradient *gradient = nil;
     if ([NSApp isActive]) {
         gradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0] endingColor:[NSColor colorWithCalibratedWhite:0.8 alpha:1.0]];

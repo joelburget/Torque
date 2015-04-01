@@ -70,7 +70,8 @@
 #define kDualFieldHeight 35.0
 
 
-NSWindow *normalWindow;
+//NSWindow *normalWindow;
+INAppStoreWindow *normalWindow;
 int ModFlagger;
 int popped;
 BOOL splitViewAwoke;
@@ -92,6 +93,7 @@ BOOL splitViewAwoke;
 
 - (id)init {
     self = [super init];
+    
     if (self) {
         hasLaunched=NO;
         
@@ -166,6 +168,9 @@ BOOL splitViewAwoke;
 	[NSApp setDelegate:self];
 	[window setDelegate:self];
     
+    window.titleBarHeight = 58.0;
+
+    
     //ElasticThreads>> set up the rbsplitview programatically to remove dependency on IBPlugin
     splitView = [[[RBSplitView alloc] initWithFrame:[mainView frame] andSubviews:2] retain];
     [splitView setAutosaveName:@"centralSplitView" recursively:NO];
@@ -231,7 +236,7 @@ BOOL splitViewAwoke;
     
 	//this will not make a difference
 	[window useOptimizedDrawing:YES];
-	
+    
     
 	//[window makeKeyAndOrderFront:self];
 	//[self setEmptyViewState:YES];
