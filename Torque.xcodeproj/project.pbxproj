@@ -292,6 +292,18 @@
 		B69E26F516F0B523001C6E4B /* DFCapRightInactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69E26ED16F0B523001C6E4B /* DFCapRightInactive@2x.png */; };
 		B69E26F616F0B523001C6E4B /* Pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69E26EE16F0B523001C6E4B /* Pencil@2x.png */; };
 		B69E26F716F0B523001C6E4B /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B69E26EF16F0B523001C6E4B /* Search@2x.png */; };
+		C0AACF0E1ACC6A5500B3659B /* error.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF061ACC6A5500B3659B /* error.style */; };
+		C0AACF0F1ACC6A5500B3659B /* fontsizes.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF071ACC6A5500B3659B /* fontsizes.style */; };
+		C0AACF101ACC6A5500B3659B /* macoslineseparator.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF081ACC6A5500B3659B /* macoslineseparator.style */; };
+		C0AACF111ACC6A5500B3659B /* playground.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF091ACC6A5500B3659B /* playground.style */; };
+		C0AACF121ACC6A5500B3659B /* solarized-dark.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF0A1ACC6A5500B3659B /* solarized-dark.style */; };
+		C0AACF131ACC6A5500B3659B /* solarized-light.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF0B1ACC6A5500B3659B /* solarized-light.style */; };
+		C0AACF141ACC6A5500B3659B /* teststyle.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF0C1ACC6A5500B3659B /* teststyle.style */; };
+		C0AACF151ACC6A5500B3659B /* winlineseparator.style in Resources */ = {isa = PBXBuildFile; fileRef = C0AACF0D1ACC6A5500B3659B /* winlineseparator.style */; };
+		C0AACF1F1ACC6CAD00B3659B /* HGMarkdownHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AACF171ACC6CAD00B3659B /* HGMarkdownHighlighter.m */; };
+		C0AACF201ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AACF191ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.m */; };
+		C0AACF211ACC6CAD00B3659B /* pmh_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = C0AACF1B1ACC6CAD00B3659B /* pmh_parser.c */; };
+		C0AACF221ACC6CAD00B3659B /* pmh_styleparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C0AACF1D1ACC6CAD00B3659B /* pmh_styleparser.c */; };
 		D3EECA00106F66C70023D7F8 /* NVPasswordGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEC9FE106F66C70023D7F8 /* NVPasswordGenerator.m */; };
 /* End PBXBuildFile section */
 
@@ -828,6 +840,23 @@
 		B69E26ED16F0B523001C6E4B /* DFCapRightInactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DFCapRightInactive@2x.png"; path = "Images/DFCapRightInactive@2x.png"; sourceTree = "<group>"; };
 		B69E26EE16F0B523001C6E4B /* Pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pencil@2x.png"; path = "Images/Pencil@2x.png"; sourceTree = "<group>"; };
 		B69E26EF16F0B523001C6E4B /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Search@2x.png"; path = "Images/Search@2x.png"; sourceTree = "<group>"; };
+		C0AACF061ACC6A5500B3659B /* error.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = error.style; sourceTree = "<group>"; };
+		C0AACF071ACC6A5500B3659B /* fontsizes.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fontsizes.style; sourceTree = "<group>"; };
+		C0AACF081ACC6A5500B3659B /* macoslineseparator.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = macoslineseparator.style; sourceTree = "<group>"; };
+		C0AACF091ACC6A5500B3659B /* playground.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = playground.style; sourceTree = "<group>"; };
+		C0AACF0A1ACC6A5500B3659B /* solarized-dark.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "solarized-dark.style"; sourceTree = "<group>"; };
+		C0AACF0B1ACC6A5500B3659B /* solarized-light.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "solarized-light.style"; sourceTree = "<group>"; };
+		C0AACF0C1ACC6A5500B3659B /* teststyle.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teststyle.style; sourceTree = "<group>"; };
+		C0AACF0D1ACC6A5500B3659B /* winlineseparator.style */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = winlineseparator.style; sourceTree = "<group>"; };
+		C0AACF161ACC6CAD00B3659B /* HGMarkdownHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGMarkdownHighlighter.h; path = example_cocoa/HGMarkdownHighlighter.h; sourceTree = "<group>"; };
+		C0AACF171ACC6CAD00B3659B /* HGMarkdownHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGMarkdownHighlighter.m; path = example_cocoa/HGMarkdownHighlighter.m; sourceTree = "<group>"; };
+		C0AACF181ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGMarkdownHighlightingStyle.h; path = example_cocoa/HGMarkdownHighlightingStyle.h; sourceTree = "<group>"; };
+		C0AACF191ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGMarkdownHighlightingStyle.m; path = example_cocoa/HGMarkdownHighlightingStyle.m; sourceTree = "<group>"; };
+		C0AACF1A1ACC6CAD00B3659B /* pmh_definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_definitions.h; sourceTree = "<group>"; };
+		C0AACF1B1ACC6CAD00B3659B /* pmh_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pmh_parser.c; sourceTree = "<group>"; };
+		C0AACF1C1ACC6CAD00B3659B /* pmh_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_parser.h; sourceTree = "<group>"; };
+		C0AACF1D1ACC6CAD00B3659B /* pmh_styleparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pmh_styleparser.c; sourceTree = "<group>"; };
+		C0AACF1E1ACC6CAD00B3659B /* pmh_styleparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmh_styleparser.h; sourceTree = "<group>"; };
 		D3EEC9FE106F66C70023D7F8 /* NVPasswordGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVPasswordGenerator.m; sourceTree = "<group>"; };
 		D3EEC9FF106F66C70023D7F8 /* NVPasswordGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVPasswordGenerator.h; sourceTree = "<group>"; };
 		D6E43B79375624023B70A817 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1285,6 +1314,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C0AACE2A1ACC69B700B3659B /* peg-markdown-highlight */,
 				93B90E7D138601C100BEC5FB /* ODBEditor */,
 				5C96F5A8131C379200A2E4AC /* Markup */,
 				5CA10FFA131C2A7600DE1F91 /* readability */,
@@ -1310,6 +1340,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C0AACF051ACC6A5500B3659B /* styles */,
 				934C3FAE14FDA069000D14BA /* custom.css */,
 				934C3FAF14FDA069000D14BA /* customclean.css */,
 				934C3FB014FDA069000D14BA /* template.html */,
@@ -1438,6 +1469,38 @@
 			path = ODBEditor;
 			sourceTree = "<group>";
 		};
+		C0AACE2A1ACC69B700B3659B /* peg-markdown-highlight */ = {
+			isa = PBXGroup;
+			children = (
+				C0AACF161ACC6CAD00B3659B /* HGMarkdownHighlighter.h */,
+				C0AACF171ACC6CAD00B3659B /* HGMarkdownHighlighter.m */,
+				C0AACF181ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.h */,
+				C0AACF191ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.m */,
+				C0AACF1A1ACC6CAD00B3659B /* pmh_definitions.h */,
+				C0AACF1B1ACC6CAD00B3659B /* pmh_parser.c */,
+				C0AACF1C1ACC6CAD00B3659B /* pmh_parser.h */,
+				C0AACF1D1ACC6CAD00B3659B /* pmh_styleparser.c */,
+				C0AACF1E1ACC6CAD00B3659B /* pmh_styleparser.h */,
+			);
+			path = "peg-markdown-highlight";
+			sourceTree = "<group>";
+		};
+		C0AACF051ACC6A5500B3659B /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				C0AACF061ACC6A5500B3659B /* error.style */,
+				C0AACF071ACC6A5500B3659B /* fontsizes.style */,
+				C0AACF081ACC6A5500B3659B /* macoslineseparator.style */,
+				C0AACF091ACC6A5500B3659B /* playground.style */,
+				C0AACF0A1ACC6A5500B3659B /* solarized-dark.style */,
+				C0AACF0B1ACC6A5500B3659B /* solarized-light.style */,
+				C0AACF0C1ACC6A5500B3659B /* teststyle.style */,
+				C0AACF0D1ACC6A5500B3659B /* winlineseparator.style */,
+			);
+			name = styles;
+			path = "peg-markdown-highlight/styles";
+			sourceTree = "<group>";
+		};
 		C47E75D7333892AC3D762F2C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1514,6 +1577,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				21973A290AFE447A0046683E /* PassphraseRetriever.nib in Resources */,
+				C0AACF111ACC6A5500B3659B /* playground.style in Resources */,
 				21544FBE0B06331800C0D1D5 /* KeyDerivationManager.nib in Resources */,
 				211344C00B3551BD0081B064 /* BlorPasswordRetriever.nib in Resources */,
 				21F1CD700B3A38DB001FB5F6 /* PTKeyCodes.plist in Resources */,
@@ -1563,6 +1627,7 @@
 				5C96F70D131C49D400A2E4AC /* TransparentButtonRightN.tiff in Resources */,
 				5C49E365131C5CC500696B68 /* Credits.html in Resources */,
 				5CF01B08132975910083D66E /* greyscrollervertbottom.tiff in Resources */,
+				C0AACF141ACC6A5500B3659B /* teststyle.style in Resources */,
 				5CF01B0C132975910083D66E /* greyscrollerverttop.tiff in Resources */,
 				5CF01B22132975DB0083D66E /* BTransparentScrollerSlotBottom.tif in Resources */,
 				5C94376F132A0C9E00B08B80 /* greyscrollervertbottom3.tif in Resources */,
@@ -1577,16 +1642,19 @@
 				5CF96D9B132EA29D0079B3FD /* Informações de Contato.nvhelp in Resources */,
 				5CF96DA8132EA29D0079B3FD /* MainMenu.xib in Resources */,
 				5CF96DA9132EA29D0079B3FD /* dsa_pub.pem in Resources */,
+				C0AACF131ACC6A5500B3659B /* solarized-light.style in Resources */,
 				5CF96DAA132EA29D0079B3FD /* Acknowledgments.txt in Resources */,
 				5CF96DAB132EA29D0079B3FD /* Dies ist der Titel einer Notiz.nvhelp in Resources */,
 				5CF96DAD132EA29D0079B3FD /* Moglicherweise nutzliche Tastenkurzel.nvhelp in Resources */,
 				5CF96DAE132EA29D0079B3FD /* Wie funktioniert dieses Programm?.nvhelp in Resources */,
 				5CF96DB0132EA29D0079B3FD /* Comment ça marche.nvhelp in Resources */,
 				5CF96DB2132EA29D0079B3FD /* Raccourcis incroyablement utiles.nvhelp in Resources */,
+				C0AACF151ACC6A5500B3659B /* winlineseparator.style in Resources */,
 				5CF96DB8132EA29D0079B3FD /* Contact Information.nvhelp in Resources */,
 				5CF96DBA132EA29D0079B3FD /* How does this thing work?.nvhelp in Resources */,
 				5CF96DBC132EA29D0079B3FD /* greyscrollervertfill3.tif in Resources */,
 				5CF96DBF132EA29D0079B3FD /* BTransparentScrollerSlotTop.tif in Resources */,
+				C0AACF121ACC6A5500B3659B /* solarized-dark.style in Resources */,
 				5CF96DC0132EA29D0079B3FD /* scrollbarblue.tif in Resources */,
 				5CF96DC2132EA29D0079B3FD /* greyscrollervertfill.tiff in Resources */,
 				5CF96DC5132EA29D0079B3FD /* TransparentButtonFillP.tiff in Resources */,
@@ -1595,6 +1663,7 @@
 				5CF96DCB132EA29D0079B3FD /* TabClose_Front_Rollover.tif in Resources */,
 				5CF96DCD132EA29D0079B3FD /* TransparentScrollerKnobBottom.tif in Resources */,
 				5CF96DCF132EA29D0079B3FD /* TransparentScrollerKnobVerticalFill.tif in Resources */,
+				C0AACF0F1ACC6A5500B3659B /* fontsizes.style in Resources */,
 				5CF96DD1132EA29D0079B3FD /* TransparentScrollerSlotTop.tif in Resources */,
 				5CF96DD6132EA29D0079B3FD /* IBeamInverted.png in Resources */,
 				5CF96DD7132EA29D0079B3FD /* ListDividerDrag.png in Resources */,
@@ -1603,6 +1672,7 @@
 				5CF96DDC132EA29D0079B3FD /* TBSynchronizing.png in Resources */,
 				5CF96DDE132EA29D0079B3FD /* TBRolloverBG.png in Resources */,
 				5CF96DE1132EA29D0079B3FD /* PTKeyboardIcon.tiff in Resources */,
+				C0AACF0E1ACC6A5500B3659B /* error.style in Resources */,
 				5CF96DE2132EA29D0079B3FD /* PasswordAssistantButton.tif in Resources */,
 				5CF96DE3132EA29D0079B3FD /* PasswordAssistantButtonPressed.tif in Resources */,
 				5CF96DE5132EA29D0079B3FD /* SplitViewDimple2.tif in Resources */,
@@ -1669,6 +1739,7 @@
 				B683A0DC16F1CDA600564A1D /* TBRolloverBG@2x.png in Resources */,
 				B683A0DD16F1CDA600564A1D /* TBSynchronizing@2x.png in Resources */,
 				B683A0DE16F1CDA600564A1D /* TBSynchronizingWhite@2x.png in Resources */,
+				C0AACF101ACC6A5500B3659B /* macoslineseparator.style in Resources */,
 				5C91A1861723079B006BF757 /* nvMenuW.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1754,6 +1825,7 @@
 				219FD63E0B309B69004E132B /* BlorPasswordRetriever.m in Sources */,
 				211344450B354E000081B064 /* idea_ossl.c in Sources */,
 				211345AB0B35D8540081B064 /* broken_md5.c in Sources */,
+				C0AACF1F1ACC6CAD00B3659B /* HGMarkdownHighlighter.m in Sources */,
 				21F1CD6D0B3A38DB001FB5F6 /* PTHotKeyCenter.m in Sources */,
 				21F1CD6F0B3A38DB001FB5F6 /* PTKeyBroadcaster.m in Sources */,
 				21F1CD710B3A38DB001FB5F6 /* PTKeyComboPanel.m in Sources */,
@@ -1773,7 +1845,9 @@
 				21BD2ED110DAF31500BA3DF6 /* LinearDividerShader.m in Sources */,
 				21F078FC10EC280E004FE56F /* NotationSyncServiceManager.m in Sources */,
 				21F0794310EC5EA2004FE56F /* SimplenoteSession.m in Sources */,
+				C0AACF201ACC6CAD00B3659B /* HGMarkdownHighlightingStyle.m in Sources */,
 				21F0797E10EC93B0004FE56F /* SyncResponseFetcher.m in Sources */,
+				C0AACF221ACC6CAD00B3659B /* pmh_styleparser.c in Sources */,
 				21F07C7B10EDED93004FE56F /* BSJSONEncoder.m in Sources */,
 				21F07C7C10EDED93004FE56F /* NSArray+BSJSONAdditions.m in Sources */,
 				21F07C7D10EDED93004FE56F /* NSDictionary+BSJSONAdditions.m in Sources */,
@@ -1781,6 +1855,7 @@
 				21F07C7F10EDED93004FE56F /* NSString+BSJSONAdditions.m in Sources */,
 				21B1BC361104D20E0004A7D0 /* InvocationRecorder.m in Sources */,
 				21AD2550110A8BA600B7A985 /* SimplenoteEntryCollector.m in Sources */,
+				C0AACF211ACC6CAD00B3659B /* pmh_parser.c in Sources */,
 				21AD2850110BE99B00B7A985 /* SyncSessionController.m in Sources */,
 				212C6952110E1940004DD82C /* TitlebarButton.m in Sources */,
 				21B548FA112F307E00E163A1 /* NotationDirectoryManager.m in Sources */,
