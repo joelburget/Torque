@@ -63,7 +63,6 @@
 -(void)togglePreview:(id)sender;
 -(void)requestPreviewUpdate:(NSNotification *)notification;
 +(void)createCustomFiles;
--(SEL)markupProcessorSelector:(NSInteger)previewMode;
 -(NSString *)urlEncodeValue:(NSString *)str;
 -(void)showShareURL:(NSString *)url isError:(BOOL)isError;
 -(IBAction)hideShareURL:(id)sender;

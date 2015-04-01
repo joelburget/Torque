@@ -82,13 +82,6 @@ BOOL splitViewAwoke;
 @synthesize isEditing;
 
 //an instance of this class is designated in the nib as the delegate of the window, nstextfield and two nstextviews
-/*
- + (void)initialize
- {
- NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:MultiMarkdownPreview] forKey:kDefaultMarkupPreviewMode];
-
- [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
- } // initialize*/
 
 
 - (id)init {
@@ -246,15 +239,6 @@ BOOL splitViewAwoke;
 	if ( [[NSUserDefaults standardUserDefaults] boolForKey:@"StatusBarItem"]) {
 		[self setUpStatusBarItem];
 	}
-
-	currentPreviewMode = [[NSUserDefaults standardUserDefaults] integerForKey:@"markupPreviewMode"];
-    if (currentPreviewMode == MarkdownPreview) {
-        [multiMarkdownPreview setState:NSOnState];
-    } else if (currentPreviewMode == MultiMarkdownPreview) {
-        [multiMarkdownPreview setState:NSOnState];
-    } else if (currentPreviewMode == TextilePreview) {
-        [textilePreview setState:NSOnState];
-    }
 
 	outletObjectAwoke(self);
 }
@@ -600,11 +584,7 @@ terminateApp:
 	NSInteger numberSelected = [notesTableView numberOfSelectedRows];
 	NSInteger tag = [menuItem tag];
 
-    if ((tag == TextilePreview) || (tag == MarkdownPreview) || (tag == MultiMarkdownPreview)) {
-        // Allow only one Preview mode to be selected at every one time
-        [menuItem setState:((tag == currentPreviewMode) ? NSOnState : NSOffState)];
-        return YES;
-    } else if (selector == @selector(printNote:) ||
+    if (selector == @selector(printNote:) ||
                selector == @selector(deleteNote:) ||
                selector == @selector(exportNote:) ||
                selector == @selector(tagNote:)) {

@@ -154,10 +154,7 @@
 		5C96F56C131C35AB00A2E4AC /* readability.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CA11001131C2A7600DE1F91 /* readability.py */; };
 		5C96F56D131C35AB00A2E4AC /* url_helpers.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CA11002131C2A7600DE1F91 /* url_helpers.py */; };
 		5C96F56E131C35AB00A2E4AC /* url_helpers.pyc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5CA11003131C2A7600DE1F91 /* url_helpers.pyc */; };
-		5C96F5AF131C37DF00A2E4AC /* NSString_MultiMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96F5AA131C37DF00A2E4AC /* NSString_MultiMarkdown.m */; };
 		5C96F5B0131C37DF00A2E4AC /* NSString_Markdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96F5AC131C37DF00A2E4AC /* NSString_Markdown.m */; };
-		5C96F5B1131C37DF00A2E4AC /* NSString_Textile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96F5AE131C37DF00A2E4AC /* NSString_Textile.m */; };
-		5C96F616131C380100A2E4AC /* Textile_2.12 in Resources */ = {isa = PBXBuildFile; fileRef = 5C96F610131C380100A2E4AC /* Textile_2.12 */; };
 		5C96F61C131C380C00A2E4AC /* Markdown_1.0.1 in Resources */ = {isa = PBXBuildFile; fileRef = 5C96F617131C380C00A2E4AC /* Markdown_1.0.1 */; };
 		5C96F6DE131C488B00A2E4AC /* ETTransparentButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96F6DD131C488B00A2E4AC /* ETTransparentButtonCell.m */; };
 		5C96F6E9131C48FE00A2E4AC /* ETTransparentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96F6E8131C48FE00A2E4AC /* ETTransparentButton.m */; };
@@ -253,7 +250,6 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		93099628138BD61000368C45 /* tp2md.rb in Resources */ = {isa = PBXBuildFile; fileRef = 93099627138BD61000368C45 /* tp2md.rb */; };
-		9335C40D148EC7AC009CE623 /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 9335C40C148EC7AC009CE623 /* multimarkdown */; };
 		934C3FB214FDA069000D14BA /* custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FAE14FDA069000D14BA /* custom.css */; };
 		934C3FB314FDA06A000D14BA /* customclean.css in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FAF14FDA069000D14BA /* customclean.css */; };
 		934C3FB414FDA06A000D14BA /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 934C3FB014FDA069000D14BA /* template.html */; };
@@ -656,13 +652,8 @@
 		5C96F4FE131C2F9500A2E4AC /* TabClose_Front.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TabClose_Front.tif; sourceTree = "<group>"; };
 		5C96F502131C2FA800A2E4AC /* BTTransparentScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTransparentScroller.m; sourceTree = "<group>"; };
 		5C96F503131C2FA800A2E4AC /* BTTransparentScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTransparentScroller.h; sourceTree = "<group>"; };
-		5C96F5A9131C37DF00A2E4AC /* NSString_MultiMarkdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_MultiMarkdown.h; sourceTree = "<group>"; };
-		5C96F5AA131C37DF00A2E4AC /* NSString_MultiMarkdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_MultiMarkdown.m; sourceTree = "<group>"; };
 		5C96F5AB131C37DF00A2E4AC /* NSString_Markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_Markdown.h; sourceTree = "<group>"; };
 		5C96F5AC131C37DF00A2E4AC /* NSString_Markdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_Markdown.m; sourceTree = "<group>"; };
-		5C96F5AD131C37DF00A2E4AC /* NSString_Textile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_Textile.h; sourceTree = "<group>"; };
-		5C96F5AE131C37DF00A2E4AC /* NSString_Textile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_Textile.m; sourceTree = "<group>"; };
-		5C96F610131C380100A2E4AC /* Textile_2.12 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textile_2.12; sourceTree = "<group>"; };
 		5C96F617131C380C00A2E4AC /* Markdown_1.0.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Markdown_1.0.1; sourceTree = "<group>"; };
 		5C96F6DD131C488B00A2E4AC /* ETTransparentButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTransparentButtonCell.m; sourceTree = "<group>"; };
 		5C96F6E7131C48FE00A2E4AC /* ETTransparentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTransparentButton.h; sourceTree = "<group>"; };
@@ -795,7 +786,6 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Torque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Torque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93099627138BD61000368C45 /* tp2md.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tp2md.rb; sourceTree = "<group>"; };
-		9335C40C148EC7AC009CE623 /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
 		934C3FAE14FDA069000D14BA /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
 		934C3FAF14FDA069000D14BA /* customclean.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = customclean.css; sourceTree = "<group>"; };
 		934C3FB014FDA069000D14BA /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
@@ -1391,16 +1381,10 @@
 		5C96F5A8131C379200A2E4AC /* Markup */ = {
 			isa = PBXGroup;
 			children = (
-				9335C40C148EC7AC009CE623 /* multimarkdown */,
 				93099627138BD61000368C45 /* tp2md.rb */,
 				5C96F617131C380C00A2E4AC /* Markdown_1.0.1 */,
-				5C96F610131C380100A2E4AC /* Textile_2.12 */,
-				5C96F5A9131C37DF00A2E4AC /* NSString_MultiMarkdown.h */,
-				5C96F5AA131C37DF00A2E4AC /* NSString_MultiMarkdown.m */,
 				5C96F5AB131C37DF00A2E4AC /* NSString_Markdown.h */,
 				5C96F5AC131C37DF00A2E4AC /* NSString_Markdown.m */,
-				5C96F5AD131C37DF00A2E4AC /* NSString_Textile.h */,
-				5C96F5AE131C37DF00A2E4AC /* NSString_Textile.m */,
 			);
 			name = Markup;
 			sourceTree = "<group>";
@@ -1620,7 +1604,6 @@
 				5CA1100C131C2A7600DE1F91 /* url_helpers.pyc in Resources */,
 				5C96F4FF131C2F9500A2E4AC /* TabClose_Front_Pressed.tif in Resources */,
 				5C96F501131C2F9500A2E4AC /* TabClose_Front.tif in Resources */,
-				5C96F616131C380100A2E4AC /* Textile_2.12 in Resources */,
 				5C96F61C131C380C00A2E4AC /* Markdown_1.0.1 in Resources */,
 				5C96F709131C49D400A2E4AC /* TransparentButtonFillN.tiff in Resources */,
 				5C96F70B131C49D400A2E4AC /* TransparentButtonLeftN.tiff in Resources */,
@@ -1713,7 +1696,6 @@
 				5C48A28213A54FBD006B73DD /* PassphraseChanger.nib in Resources */,
 				5C84319114229D810020E5A7 /* PassphraseRetriever.xib in Resources */,
 				5CE5B0081422795300FB554C /* PTKeyComboPanel.xib in Resources */,
-				9335C40D148EC7AC009CE623 /* multimarkdown in Resources */,
 				5CD1B00714F4593900AC948E /* Add.tiff in Resources */,
 				934C3FB214FDA069000D14BA /* custom.css in Resources */,
 				934C3FB314FDA06A000D14BA /* customclean.css in Resources */,
@@ -1878,9 +1860,7 @@
 				5CA10F32131C29E900DE1F91 /* AppController_Preview.m in Sources */,
 				5CA10F3B131C2A3F00DE1F91 /* MAAttachedWindow.m in Sources */,
 				5C96F504131C2FA800A2E4AC /* BTTransparentScroller.m in Sources */,
-				5C96F5AF131C37DF00A2E4AC /* NSString_MultiMarkdown.m in Sources */,
 				5C96F5B0131C37DF00A2E4AC /* NSString_Markdown.m in Sources */,
-				5C96F5B1131C37DF00A2E4AC /* NSString_Textile.m in Sources */,
 				5C96F6DE131C488B00A2E4AC /* ETTransparentButtonCell.m in Sources */,
 				5C96F6E9131C48FE00A2E4AC /* ETTransparentButton.m in Sources */,
 				5C9C7734131DA04300FB2652 /* WordCountToken.m in Sources */,
