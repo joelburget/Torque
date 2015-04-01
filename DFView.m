@@ -13,12 +13,6 @@
 
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {        
-        if (!vColor) {
-            [self setBackgroundColor:[[NSApp delegate] backgrndColor]];
-        }
-        // Initialization code here.
-    }
     return self;
 }
 
@@ -32,17 +26,17 @@
         [vColor release];
     }
     CGFloat fWhite;
-	
+
 	fWhite = [[inColor colorUsingColorSpaceName:NSCalibratedWhiteColorSpace] whiteComponent];
 	if (fWhite < 0.75f) {
 		if (fWhite<0.25f) {
 			fWhite += 0.22f;
 		}else {
 			fWhite += 0.16f;
-		}		
+		}
 	}else {
 		fWhite -= 0.20f;
-	}	
+	}
 	vColor = [NSColor colorWithCalibratedWhite:fWhite alpha:1.0f];
 	[vColor retain];
 }

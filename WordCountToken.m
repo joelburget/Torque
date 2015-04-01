@@ -21,10 +21,6 @@
 - (void)awakeFromNib{
 	[self refusesFirstResponder];
 	//theGrad =  [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.2f alpha:0.28f] endingColor:[NSColor colorWithCalibratedWhite:0.74f alpha:0.18f]] retain];
-	
-	//[self setTxtColor:[[NSApp delegate] foregrndColor]];
-	//[self setFldColor:[[NSApp delegate] backgrndColor]];
-	
 }
 
 - (void)mouseDown:(NSEvent *)theEvent{

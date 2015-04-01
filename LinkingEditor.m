@@ -69,11 +69,34 @@ static long (*GetGetScriptManagerVariablePointer())(short);
 CGFloat _perceptualDarkness(NSColor*a);
 
 - (void)initHL {
-    hl = [[HGMarkdownHighlighter alloc] initWithTextView: self];
-	[hl activate];
-    hl.styles = nil;
-    [hl readClearTextStylesFromTextView];
+    [self setFont:[NSFont fontWithName:@"courier" size:12]];
+    hl = [[HGMarkdownHighlighter alloc] initWithTextView:self
+                                            waitInterval:0];
+    
+    // hl.styles = hl->getDefaultStyles();
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"solarized-light" ofType:@"style"];
+    NSString* styleContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    //NSLog(@"%@\n%@", path, styleContents);
+    [hl applyStylesFromStylesheet:styleContents withErrorHandler:^(NSArray *errorMessages){
+        NSMutableString *errorsInfo = [NSMutableString string];
+        for (NSString *str in errorMessages) {
+            [errorsInfo appendString:@"* "];
+            [errorsInfo appendString:str];
+            [errorsInfo appendString:@"\n"];
+        }
+        
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Errors parsing the stylesheet"
+                                         defaultButton:@"Ok"
+                                       alternateButton:nil
+                                           otherButton:nil
+                             informativeTextWithFormat:@"%@", errorsInfo];
+        [alert runModal];
+    }];
+
+    //[hl readClearTextStylesFromTextView];
     [hl highlightNow];
+    
+    [hl activate];
 }
 
 - (void)awakeFromNib {
@@ -111,6 +134,7 @@ CGFloat _perceptualDarkness(NSColor*a);
 
 	didRenderFully = NO;
 	[[self layoutManager] setDelegate:self];
+    [self initHL];
 
 //	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 //	[center addObserver:self selector:@selector(windowBecameOrResignedMain:) name:NSWindowDidBecomeMainNotification object:[self window]];
@@ -133,21 +157,6 @@ CGFloat _perceptualDarkness(NSColor*a);
 		if (IsSnowLeopardOrLater) {
 			[self setAutomaticTextReplacementEnabled:[prefsController useTextReplacement]];
 		}
-    } else if ([selectorString isEqualToString:SEL_STR(setNoteBodyFont:sender:)]) {
-
-		[self setTypingAttributes:[prefsController noteBodyAttributes]];
-		//[textView setFont:[prefsController noteBodyFont]];
-
-	//} else if ([selectorString isEqualToString:SEL_STR(setBackgroundTextColor:sender:)]) {
-
-		//link-color is derived both from foreground and background colors
-		//[self updateTextColors];
-
-	//} else if ([selectorString isEqualToString:SEL_STR(setForegroundTextColor:sender:)]) {
-
-		//[self updateTextColors];
-		//[self setTypingAttributes:[prefsController noteBodyAttributes]];
-
 	} else if ([selectorString isEqualToString:SEL_STR(setSearchTermHighlightColor:sender:)] ||
 			   [selectorString isEqualToString:SEL_STR(setShouldHighlightSearchTerms:sender:)]) {
 
@@ -205,14 +214,17 @@ CGFloat _perceptualDarkness(NSColor*a);
 	[super setBackgroundColor:aColor];
 }
 
+- (NSColor*)foregroundColor {
+    return [NSColor blackColor];
+}
+
+- (NSColor*)backgroundColor {
+    return [NSColor whiteColor];
+}
+
 - (void)updateTextColors {
-	NSColor *fgColor = [[NSApp delegate] foregrndColor];
+	NSColor *fgColor = [self foregroundColor];
 	NSColor *bgColor = [self backgroundColor];
-    if (bgColor!=[[NSApp delegate]backgrndColor]) {
-        bgColor=[[NSApp delegate]backgrndColor];
-        [self setBackgroundColor:bgColor];
-    }
-	[[self enclosingScrollView] setBackgroundColor:bgColor];
     if (IsLionOrLater&&[self textFinderIsVisible]) {
         [[self window]invalidateCursorRectsForView:[[self enclosingScrollView]findBarView]];
     }

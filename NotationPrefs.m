@@ -71,7 +71,8 @@ NSMutableDictionary *ServiceAccountDictInit(NotationPrefs *prefs, NSString* serv
 		keyLengthInBits = DEFAULT_KEY_LENGTH;
 		baseBodyFont = [[[GlobalPrefs defaultPrefs] noteBodyFont] retain];
 		//foregroundColor = [[[GlobalPrefs defaultPrefs] foregroundTextColor] retain];
-		foregroundColor = [[[NSApp delegate] foregrndColor]retain];
+        // TEMP(joel)
+        foregroundColor = [NSColor whiteColor];
 		epochIteration = 0;
 		
 		[self updateOSTypesArray];
@@ -120,9 +121,8 @@ NSMutableDictionary *ServiceAccountDictInit(NotationPrefs *prefs, NSString* serv
 			NSLog(@"Error trying to unarchive foreground text color (%@, %@)", [e name], [e reason]);
 		}
 		if (!foregroundColor || ![foregroundColor isKindOfClass:[NSColor class]]) {
-			//foregroundColor = [[[GlobalPrefs defaultPrefs] foregroundTextColor] retain];
-			
-			foregroundColor = [[[NSApp delegate] foregrndColor]retain];
+            // TEMP(joel)
+			foregroundColor = [NSColor whiteColor];
 			preferencesChanged = YES;
 		}
 		

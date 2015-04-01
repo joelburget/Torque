@@ -334,8 +334,6 @@ returnResult:
 			
 	[prefsController setNotationPrefs:notationPrefs sender:self];
 	
-	[self makeForegroundTextColorMatchGlobalPrefs];
-	
 	if(notesData)
 	    free(notesData);
 	
@@ -1164,29 +1162,6 @@ bail:
 		[allNotes makeObjectsPerformSelector:@selector(updateDateStrings)];
 		[delegate notationListDidChange:self];
 	}
-}
-
-- (void)makeForegroundTextColorMatchGlobalPrefs {
-	NSColor *prefsFGColor = [notationPrefs foregroundColor];
-	if (prefsFGColor) {
-		NSColor *fgColor = [[NSApp delegate] foregrndColor];
-		[self setForegroundTextColor:fgColor];
-		//NSColor *fgColor = [prefsController foregroundTextColor];
-		
-		//if (!ColorsEqualWith8BitChannels(prefsFGColor, fgColor)) {			
-		//	[self setForegroundTextColor:fgColor];
-		//}
-	}
-}
-
-- (void)setForegroundTextColor:(NSColor*)fgColor {
-	//do not update the notes in any other way, nor the database, other than also setting this color in notationPrefs
-	//foreground color is archived only for practicality, and should be for display only
-	NSAssert(fgColor != nil, @"foreground color cannot be nil");
-
-	[allNotes makeObjectsPerformSelector:@selector(setForegroundTextColorOnly:) withObject:fgColor];
-	
-	[notationPrefs setForegroundTextColor:fgColor];
 }
 
 - (void)restyleAllNotes {

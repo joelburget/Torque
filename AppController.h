@@ -67,12 +67,14 @@
   NSStatusItem *statusItem;
 	IBOutlet NSMenu *statBarMenu;
 	TagEditingManager *tagEditor;
-	NSColor *backgrndColor;
-	NSColor *foregrndColor;
 	NSInteger userScheme;
 	NSString *noteFormat;
 	NSTextView *theFieldEditor;
-  NSDictionary *fieldAttributes;
+    
+    // text field foreground color, background color, text color (?), insertion point color
+    NSDictionary *fieldAttributes;
+    
+    // TODO(joel) kill?
 	NSTimer *modifierTimer;
 	IBOutlet WordCountToken *wordCounter;
   IBOutlet DualField *field;
@@ -124,6 +126,9 @@
   IBOutlet NSMenuItem *printPreviewItem;
   IBOutlet NSMenuItem *savePreviewItem;
   NSInteger currentPreviewMode;
+    
+    NSColor* backgroundColor;
+    NSColor* foregroundColor;
 }
 
 @property(readwrite)BOOL isEditing;
@@ -198,15 +203,8 @@ void outletObjectAwoke(id sender);
 //- (IBAction)openFileInEditor:(id)sender;
 //- (NSArray *)getTxtAppList;
 //- (void)updateTextApp:(id)sender;
-- (IBAction)setBWColorScheme:(id)sender;
-- (IBAction)setLCColorScheme:(id)sender;
-- (IBAction)setUserColorScheme:(id)sender;
 - (void)updateFieldAttributes;
 - (void)updateColorScheme;
-- (void)setBackgrndColor:(NSColor *)inColor;
-- (void)setForegrndColor:(NSColor *)inColor;
-- (NSColor *)backgrndColor;
-- (NSColor *)foregrndColor;
 - (void)updateWordCount:(BOOL)doIt;
 - (void)ensurePreviewIsVisible;
 - (void)resetModTimers:(NSNotification *)notification;

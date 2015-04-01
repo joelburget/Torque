@@ -68,6 +68,10 @@
 //@property (readonly) BOOL clipboardHasLink;
 
 - (void)initHL;
+- (NSColor*)foregroundColor;
+- (NSColor*)backgroundColor;
+
+
 - (NSColor*)_insertionPointColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;
 - (NSColor*)_linkColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;
 - (NSColor*)_selectionColorForForegroundColor:(NSColor*)fgColor backgroundColor:(NSColor*)bgColor;

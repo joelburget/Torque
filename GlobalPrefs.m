@@ -566,9 +566,10 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
 
 - (void)resolveNoteBodyFontFromNotationPrefsFromSender:(id)sender {
 	
-	NSFont *prefsFont = [notationPrefs baseBodyFont];
+	NSFont *prefsFont = [NSFont fontWithName:@"courier" size:12];//[notationPrefs baseBodyFont];
 	if (prefsFont) {
-		NSFont *noteFont = [self noteBodyFont];
+		//NSFont *noteFont = [self noteBodyFont];
+        NSFont *noteFont = [NSFont fontWithName:@"courier" size:12];
 		
 		if (![[prefsFont fontName] isEqualToString:[noteFont fontName]] || 
 			[prefsFont pointSize] != [noteFont pointSize]) {
@@ -583,7 +584,7 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
 
 - (void)_setNoteBodyFont:(NSFont*)aFont {
 	NSFont *oldFont = noteBodyFont;
-	noteBodyFont = [aFont retain];
+    noteBodyFont = [NSFont fontWithName:@"courier" size:12];//[aFont retain];
 	
 	[noteBodyParagraphStyle release];
 	noteBodyParagraphStyle = nil;
@@ -639,12 +640,14 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
 	NSFont *bodyFont = [self noteBodyFont];
 	if (!noteBodyAttributes && bodyFont) {
 		//NSLog(@"notebody att2");
+        // TEMP(joel)
+        NSColor* foregroundColor = [NSColor whiteColor];
 		
 		NSMutableDictionary *attrs = [[NSMutableDictionary dictionaryWithObjectsAndKeys:bodyFont, NSFontAttributeName, nil] retain];
 		
 		//not storing the foreground color in each note will make the database smaller, and black is assumed when drawing text
 		//NSColor *fgColor = [self foregroundTextColor];
-		NSColor *fgColor = [[NSApp delegate] foregrndColor];
+        NSColor *fgColor = foregroundColor;
 		
 		if (!ColorsEqualWith8BitChannels([NSColor blackColor], fgColor)) {
 			[attrs setObject:fgColor forKey:NSForegroundColorAttributeName];
@@ -663,7 +666,7 @@ BOOL ColorsEqualWith8BitChannels(NSColor *c1, NSColor *c2) {
 	}else {
 		//NSLog(@"notebody att4");
 		NSMutableDictionary *attrs = [[NSMutableDictionary dictionaryWithObjectsAndKeys:bodyFont, NSFontAttributeName, nil] retain];
-		NSColor *fgColor = [[NSApp delegate] foregrndColor];
+        NSColor *fgColor = [NSColor whiteColor];
 		
 		//	if (!ColorsEqualWith8BitChannels([NSColor blackColor], fgColor)) {
 		[attrs setObject:fgColor forKey:NSForegroundColorAttributeName];
