@@ -320,12 +320,7 @@
             [pathString hasSuffix:@"gif"]   ||
             [pathString hasSuffix:@"png"])
         {
-          currentPreviewMode = [[NSUserDefaults standardUserDefaults] integerForKey:@"markupPreviewMode"];
-          if (currentPreviewMode == MarkdownPreview || currentPreviewMode == MultiMarkdownPreview) {
             linkFormat = @"![](%@)%s";
-          } else if (currentPreviewMode == TextilePreview) {
-            linkFormat = @"!%@()!%s"; 
-          }
         }
         [allURLsString appendFormat:linkFormat, 
          [pathString stringByReplacingOccurrencesOfString:@"file://localhost" withString:@"file://"],

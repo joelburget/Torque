@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">14C1514</string>
+		<string key="IBDocument.SystemVersion">14C109</string>
 		<string key="IBDocument.InterfaceBuilderVersion">6751</string>
 		<string key="IBDocument.AppKitVersion">1344.72</string>
 		<string key="IBDocument.HIToolboxVersion">757.30</string>
@@ -1089,34 +1089,6 @@
 						<object class="NSMenu" key="NSSubmenu" id="42861392">
 							<string key="NSTitle">Preview</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="13868295">
-									<reference key="NSMenu" ref="42861392"/>
-									<string key="NSTitle">(Multi)Markdown</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="259802817"/>
-									<reference key="NSMixedImage" ref="853026812"/>
-									<int key="NSTag">13372</int>
-								</object>
-								<object class="NSMenuItem" id="1010793450">
-									<reference key="NSMenu" ref="42861392"/>
-									<string key="NSTitle">Textile</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="259802817"/>
-									<reference key="NSMixedImage" ref="853026812"/>
-									<int key="NSTag">13373</int>
-								</object>
-								<object class="NSMenuItem" id="663017186">
-									<reference key="NSMenu" ref="42861392"/>
-									<bool key="NSIsDisabled">YES</bool>
-									<bool key="NSIsSeparator">YES</bool>
-									<string key="NSTitle"/>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="259802817"/>
-									<reference key="NSMixedImage" ref="853026812"/>
-								</object>
 								<object class="NSMenuItem" id="10703719">
 									<reference key="NSMenu" ref="42861392"/>
 									<string key="NSTitle">Toggle Preview Window</string>
@@ -2778,38 +2750,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<int key="connectionID">1278</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">selectPreviewMode:</string>
-						<reference key="source" ref="449647087"/>
-						<reference key="destination" ref="13868295"/>
-					</object>
-					<int key="connectionID">1279</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">multiMarkdownPreview</string>
-						<reference key="source" ref="449647087"/>
-						<reference key="destination" ref="13868295"/>
-					</object>
-					<int key="connectionID">1280</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">selectPreviewMode:</string>
-						<reference key="source" ref="449647087"/>
-						<reference key="destination" ref="1010793450"/>
-					</object>
-					<int key="connectionID">1281</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">textilePreview</string>
-						<reference key="source" ref="449647087"/>
-						<reference key="destination" ref="1010793450"/>
-					</object>
-					<int key="connectionID">1282</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">notesScrollView</string>
 						<reference key="source" ref="449647087"/>
@@ -4342,9 +4282,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<array class="NSMutableArray" key="children">
 							<reference ref="165222772"/>
 							<reference ref="565122521"/>
-							<reference ref="1010793450"/>
-							<reference ref="13868295"/>
-							<reference ref="663017186"/>
 							<reference ref="10703719"/>
 							<reference ref="117742158"/>
 							<reference ref="684189979"/>
@@ -4361,21 +4298,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<object class="IBObjectRecord">
 						<int key="objectID">1273</int>
 						<reference key="object" ref="565122521"/>
-						<reference key="parent" ref="42861392"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1272</int>
-						<reference key="object" ref="1010793450"/>
-						<reference key="parent" ref="42861392"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1271</int>
-						<reference key="object" ref="13868295"/>
-						<reference key="parent" ref="42861392"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1270</int>
-						<reference key="object" ref="663017186"/>
 						<reference key="parent" ref="42861392"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -4612,9 +4534,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				<string key="1267.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1268.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1269.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1270.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1271.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1272.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1273.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1274.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1286.CustomClassName">WordCountToken</string>
@@ -4765,8 +4684,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<string key="sharePreview:">id</string>
 						<string key="showHelpDocument:">id</string>
 						<string key="showPreferencesWindow:">id</string>
-						<string key="switchFullScreen:">id</string>
-						<string key="switchViewLayout:">id</string>
 						<string key="syncWaitQuit:">id</string>
 						<string key="tagNote:">id</string>
 						<string key="toggleCollapse:">id</string>
@@ -4852,14 +4769,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<string key="name">showPreferencesWindow:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="switchFullScreen:">
-							<string key="name">switchFullScreen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchViewLayout:">
-							<string key="name">switchViewLayout:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="syncWaitQuit:">
 							<string key="name">syncWaitQuit:</string>
 							<string key="candidateClassName">id</string>
@@ -4892,7 +4801,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="editorStatusView">EmptyView</string>
 						<string key="field">DualField</string>
-						<string key="fsMenuItem">NSMenuItem</string>
 						<string key="lockNoteItem">NSMenuItem</string>
 						<string key="mainView">ETContentView</string>
 						<string key="multiMarkdownPreview">NSMenuItem</string>
@@ -4908,7 +4816,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<string key="textScrollView">ETScrollView</string>
 						<string key="textView">LinkingEditor</string>
 						<string key="textilePreview">NSMenuItem</string>
-						<string key="window">NSWindow</string>
+						<string key="window">INAppStoreWindow</string>
 						<string key="wordCounter">WordCountToken</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -4919,10 +4827,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<object class="IBToOneOutletInfo" key="field">
 							<string key="name">field</string>
 							<string key="candidateClassName">DualField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="fsMenuItem">
-							<string key="name">fsMenuItem</string>
-							<string key="candidateClassName">NSMenuItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="lockNoteItem">
 							<string key="name">lockNoteItem</string>
@@ -4986,7 +4890,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						</object>
 						<object class="IBToOneOutletInfo" key="window">
 							<string key="name">window</string>
-							<string key="candidateClassName">NSWindow</string>
+							<string key="candidateClassName">INAppStoreWindow</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="wordCounter">
 							<string key="name">wordCounter</string>
@@ -4995,7 +4899,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../AppController.h</string>
+						<string key="minorKey">AppController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5018,12 +4922,9 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<string key="revealNote:">id</string>
 						<string key="savePreview:">id</string>
 						<string key="selectPreviewMode:">id</string>
-						<string key="setUserColorScheme:">id</string>
 						<string key="sharePreview:">id</string>
 						<string key="showHelpDocument:">id</string>
 						<string key="showPreferencesWindow:">id</string>
-						<string key="switchFullScreen:">id</string>
-						<string key="switchViewLayout:">id</string>
 						<string key="syncWaitQuit:">id</string>
 						<string key="tagNote:">id</string>
 						<string key="toggleCollapse:">id</string>
@@ -5101,10 +5002,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<string key="name">selectPreviewMode:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="setUserColorScheme:">
-							<string key="name">setUserColorScheme:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="sharePreview:">
 							<string key="name">sharePreview:</string>
 							<string key="candidateClassName">id</string>
@@ -5115,14 +5012,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						</object>
 						<object class="IBActionInfo" key="showPreferencesWindow:">
 							<string key="name">showPreferencesWindow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchFullScreen:">
-							<string key="name">switchFullScreen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchViewLayout:">
-							<string key="name">switchViewLayout:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="syncWaitQuit:">
@@ -5156,7 +5045,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../AppController.m</string>
+						<string key="minorKey">AppController.m</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5175,7 +5064,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../DualField.h</string>
+						<string key="minorKey">DualField.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5183,7 +5072,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../ETContentView.h</string>
+						<string key="minorKey">ETContentView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5191,7 +5080,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSScrollView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../ETScrollView.h</string>
+						<string key="minorKey">ETScrollView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5210,7 +5099,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../EmptyView.h</string>
+						<string key="minorKey">EmptyView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5269,7 +5158,15 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSTableHeaderView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../HeaderViewWIthMenu.h</string>
+						<string key="minorKey">HeaderViewWIthMenu.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">INAppStoreWindow</string>
+					<string key="superclassName">NSWindow</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Pods/INAppStoreWindow/INAppStoreWindow/INAppStoreWindow.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5315,7 +5212,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../LinkingEditor.h</string>
+						<string key="minorKey">LinkingEditor.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5346,7 +5243,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../LinkingEditor.m</string>
+						<string key="minorKey">LinkingEditor.m</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5367,7 +5264,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../LinkingEditor_Indentation.h</string>
+						<string key="minorKey">LinkingEditor_Indentation.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5388,7 +5285,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../LinkingEditor_Indentation.m</string>
+						<string key="minorKey">LinkingEditor_Indentation.m</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5396,7 +5293,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSWindow</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../MAAttachedWindow.h</string>
+						<string key="minorKey">MAAttachedWindow.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5414,7 +5311,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../MAAttachedWindow.m</string>
+						<string key="minorKey">MAAttachedWindow.m</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5447,7 +5344,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../NotesTableView.h</string>
+						<string key="minorKey">NotesTableView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5468,7 +5365,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../NotesTableView.m</string>
+						<string key="minorKey">NotesTableView.m</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5476,7 +5373,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../StatusItemView.h</string>
+						<string key="minorKey">StatusItemView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -5484,7 +5381,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<string key="superclassName">NSTokenField</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">../WordCountToken.h</string>
+						<string key="minorKey">WordCountToken.h</string>
 					</object>
 				</object>
 			</array>

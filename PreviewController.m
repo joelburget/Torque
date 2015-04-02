@@ -8,9 +8,7 @@
 #import "PreviewController.h"
 #import "AppController.h" // TODO for the defines only, can you get around that?
 #import "AppController_Preview.h"
-#import "NSString_MultiMarkdown.h"
 #import "NSString_Markdown.h"
-#import "NSString_Textile.h"
 #import "NoteObject.h"
 #import "ETTransparentButtonCell.h"
 #import "ETTransparentButton.h"
@@ -336,8 +334,7 @@
 //	NSString *lastScrollPosition = [[preview windowScriptObject] evaluateWebScript:@"document.getElementsByTagName('body')[0].scrollTop"];
 	AppController *app = object;
 	NSString *rawString = [app noteContent];
-	SEL mode = [self markupProcessorSelector:[app currentPreviewMode]];
-	NSString *processedString = [NSString performSelector:mode withObject:rawString];
+	NSString *processedString = [NSString performSelector:@selector(stringWithProcessedMarkdown:) withObject:rawString];
   NSString *previewString = processedString;
 	NSMutableString *outputString = [NSMutableString stringWithString:(NSString *)htmlString];
 	NSString *noteTitle =  ([app selectedNoteObject]) ? [NSString stringWithFormat:@"%@",titleOfNote([app selectedNoteObject])] : @"";
@@ -364,20 +361,6 @@
 
 	[sourceView replaceCharactersInRange:NSMakeRange(0, [[sourceView string] length]) withString:processedString];
     self.isPreviewOutdated = NO;
-}
-
--(SEL)markupProcessorSelector:(NSInteger)previewMode
-{
-    if (previewMode == MarkdownPreview) {
-		previewMode = MultiMarkdownPreview;
-        return @selector(stringWithProcessedMultiMarkdown:);
-    } else if (previewMode == MultiMarkdownPreview) {
-        return @selector(stringWithProcessedMultiMarkdown:);
-    } else if (previewMode == TextilePreview) {
-        return @selector(stringWithProcessedTextile:);
-    }
-
-    return nil;
 }
 
 + (void) createCustomFiles
@@ -461,8 +444,7 @@
   AppController *app = [NSApp delegate];
 	NSString *noteTitle = [NSString stringWithFormat:@"%@",titleOfNote([app selectedNoteObject])];
   NSString *rawString = [app noteContent];
-  SEL mode = [self markupProcessorSelector:[app currentPreviewMode]];
-  NSString *processedString = [NSString performSelector:mode withObject:rawString];
+  NSString *processedString = [NSString performSelector:@selector(stringWithProcessedMultiMarkdown:) withObject:rawString];
 
 
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
@@ -521,13 +503,7 @@
 		NSString *rawString = [app noteContent];
 		NSString *processedString = [[[NSString alloc] init] autorelease];
 
-		if ([app currentPreviewMode] == MarkdownPreview) {
-			processedString = [NSString stringWithProcessedMarkdown:rawString];
-		} else if ([app currentPreviewMode] == MultiMarkdownPreview) {
-			processedString = ( [includeTemplate state] == NSOnState ) ? [NSString documentWithProcessedMultiMarkdown:rawString] : [NSString xhtmlWithProcessedMultiMarkdown:rawString];
-		} else if ([app currentPreviewMode] == TextilePreview) {
-			processedString = ( [includeTemplate state] == NSOnState ) ? [NSString documentWithProcessedTextile:rawString] : [NSString xhtmlWithProcessedTextile:rawString];
-		}
+		processedString = [NSString stringWithProcessedMarkdown:rawString];
     NSURL *file = [sheet URL];
     NSError *error;
     [processedString writeToURL:file atomically:YES encoding:NSUTF8StringEncoding error:&error];

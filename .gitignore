@@ -55,3 +55,5 @@ French.lproj/*.nvhelp
 
 *.pbxproj
 nvalt.taskpaper
+*.lock
+Pods/Target\ Support\ Files/Pods/Pods-resources.sh

@@ -61,9 +61,11 @@
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<string key="NSWindowContentMinSize">{213, 107}</string>
 				<object class="NSView" key="NSWindowView" id="92063295">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<string key="NSFrameSize">{397, 464}</string>
+					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 877}}</string>
 				<string key="NSMinSize">{213, 129}</string>
@@ -1120,34 +1122,6 @@
 						<object class="NSMenu" key="NSSubmenu" id="404670816">
 							<string key="NSTitle">Preview</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="496908394">
-									<reference key="NSMenu" ref="404670816"/>
-									<string key="NSTitle">(Multi)Markdown</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="838981797"/>
-									<reference key="NSMixedImage" ref="795901623"/>
-									<int key="NSTag">13372</int>
-								</object>
-								<object class="NSMenuItem" id="820569953">
-									<reference key="NSMenu" ref="404670816"/>
-									<string key="NSTitle">Textile</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="838981797"/>
-									<reference key="NSMixedImage" ref="795901623"/>
-									<int key="NSTag">13373</int>
-								</object>
-								<object class="NSMenuItem" id="531788309">
-									<reference key="NSMenu" ref="404670816"/>
-									<bool key="NSIsDisabled">YES</bool>
-									<bool key="NSIsSeparator">YES</bool>
-									<string key="NSTitle"/>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="838981797"/>
-									<reference key="NSMixedImage" ref="795901623"/>
-								</object>
 								<object class="NSMenuItem" id="968167274">
 									<reference key="NSMenu" ref="404670816"/>
 									<string key="NSTitle">Toggle Preview Window</string>
@@ -2852,38 +2826,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">selectPreviewMode:</string>
-						<reference key="source" ref="464328210"/>
-						<reference key="destination" ref="496908394"/>
-					</object>
-					<int key="connectionID">1248</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">textilePreview</string>
-						<reference key="source" ref="464328210"/>
-						<reference key="destination" ref="820569953"/>
-					</object>
-					<int key="connectionID">1250</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">multiMarkdownPreview</string>
-						<reference key="source" ref="464328210"/>
-						<reference key="destination" ref="496908394"/>
-					</object>
-					<int key="connectionID">1251</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">selectPreviewMode:</string>
-						<reference key="source" ref="464328210"/>
-						<reference key="destination" ref="820569953"/>
-					</object>
-					<int key="connectionID">1252</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">toggleWordCount:</string>
 						<reference key="source" ref="464328210"/>
 						<reference key="destination" ref="375176083"/>
@@ -4272,9 +4214,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<array class="NSMutableArray" key="children">
 							<reference ref="844680758"/>
 							<reference ref="701138153"/>
-							<reference ref="820569953"/>
-							<reference ref="496908394"/>
-							<reference ref="531788309"/>
 							<reference ref="968167274"/>
 							<reference ref="685318780"/>
 							<reference ref="368268865"/>
@@ -4291,21 +4230,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					<object class="IBObjectRecord">
 						<int key="objectID">1240</int>
 						<reference key="object" ref="701138153"/>
-						<reference key="parent" ref="404670816"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1241</int>
-						<reference key="object" ref="820569953"/>
-						<reference key="parent" ref="404670816"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1242</int>
-						<reference key="object" ref="496908394"/>
-						<reference key="parent" ref="404670816"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1243</int>
-						<reference key="object" ref="531788309"/>
 						<reference key="parent" ref="404670816"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -4698,9 +4622,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 				<string key="1238.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1239.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1240.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1241.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1242.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1243.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1244.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1255.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1258.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5096,209 +5017,6 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<string key="sharePreview:">id</string>
 						<string key="showHelpDocument:">id</string>
 						<string key="showPreferencesWindow:">id</string>
-						<string key="syncWaitQuit:">id</string>
-						<string key="tagNote:">id</string>
-						<string key="toggleCollapse:">id</string>
-						<string key="toggleNVActivation:">id</string>
-						<string key="togglePreview:">id</string>
-						<string key="toggleSourceView:">id</string>
-						<string key="toggleWordCount:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="bringFocusToControlField:">
-							<string key="name">bringFocusToControlField:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="copyNoteLink:">
-							<string key="name">copyNoteLink:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="deleteNote:">
-							<string key="name">deleteNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="editNoteExternally:">
-							<string key="name">editNoteExternally:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="exportNote:">
-							<string key="name">exportNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="fieldAction:">
-							<string key="name">fieldAction:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="fixFileEncoding:">
-							<string key="name">fixFileEncoding:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="importNotes:">
-							<string key="name">importNotes:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lockPreview:">
-							<string key="name">lockPreview:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="multiTag:">
-							<string key="name">multiTag:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="previewNoteWithMarked:">
-							<string key="name">previewNoteWithMarked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="printNote:">
-							<string key="name">printNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="printPreview:">
-							<string key="name">printPreview:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="renameNote:">
-							<string key="name">renameNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="revealNote:">
-							<string key="name">revealNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="savePreview:">
-							<string key="name">savePreview:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectPreviewMode:">
-							<string key="name">selectPreviewMode:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sharePreview:">
-							<string key="name">sharePreview:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showHelpDocument:">
-							<string key="name">showHelpDocument:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showPreferencesWindow:">
-							<string key="name">showPreferencesWindow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="syncWaitQuit:">
-							<string key="name">syncWaitQuit:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="tagNote:">
-							<string key="name">tagNote:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleCollapse:">
-							<string key="name">toggleCollapse:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleNVActivation:">
-							<string key="name">toggleNVActivation:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="togglePreview:">
-							<string key="name">togglePreview:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleSourceView:">
-							<string key="name">toggleSourceView:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleWordCount:">
-							<string key="name">toggleWordCount:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">AppController.m</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DualField</string>
-					<string key="superclassName">NSTextField</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">notesTable</string>
-						<string key="NS.object.0">NSTableView</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">notesTable</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">notesTable</string>
-							<string key="candidateClassName">NSTableView</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">DualField.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">ETContentView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">ETContentView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">ETScrollView</string>
-					<string key="superclassName">NSScrollView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">ETScrollView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">EmptyView</string>
-					<string key="superclassName">NSView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">labelText</string>
-						<string key="NS.object.0">NSTextField</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">labelText</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">labelText</string>
-							<string key="candidateClassName">NSTextField</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">EmptyView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">FirstResponder</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="bringFocusToControlField:">id</string>
-						<string key="copyNoteLink:">id</string>
-						<string key="deleteNote:">id</string>
-						<string key="editNoteExternally:">id</string>
-						<string key="exportNote:">id</string>
-						<string key="fieldAction:">id</string>
-						<string key="fixFileEncoding:">id</string>
-						<string key="importNotes:">id</string>
-						<string key="lockPreview:">id</string>
-						<string key="multiTag:">id</string>
-						<string key="previewNoteWithMarked:">id</string>
-						<string key="printNote:">id</string>
-						<string key="printPreview:">id</string>
-						<string key="renameNote:">id</string>
-						<string key="revealNote:">id</string>
-						<string key="savePreview:">id</string>
-						<string key="selectPreviewMode:">id</string>
-						<string key="setUserColorScheme:">id</string>
-						<string key="sharePreview:">id</string>
-						<string key="showHelpDocument:">id</string>
-						<string key="showPreferencesWindow:">id</string>
-						<string key="switchFullScreen:">id</string>
-						<string key="switchViewLayout:">id</string>
 						<string key="syncWaitQuit:">id</string>
 						<string key="tagNote:">id</string>
 						<string key="toggleCollapse:">id</string>
