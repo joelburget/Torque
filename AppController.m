@@ -2496,24 +2496,22 @@ terminateApp:
     //        [[NSUserDefaults standardUserDefaults] setBool:!isVis forKey:@"ToolbarHidden"];
     if (isVis) {
         [window setTitle:@"Torque"];
-        if (currentNote&&(![[field stringValue]isEqualToString:titleOfNote(currentNote)]))
+        if (currentNote&&(![[field stringValue]isEqualToString:titleOfNote(currentNote)])) {
             [field setStringValue:titleOfNote(currentNote)];
-
-
+        }
         [window setInitialFirstResponder:field];
 
-    }else{
-        if (currentNote)
+    } else {
+        if (currentNote) {
             [window setTitle:titleOfNote(currentNote)];
-
-
+        }
         [window setInitialFirstResponder:textView];
     }
 
     if (![[NSArray arrayWithObjects:textView,notesTableView,theFieldEditor, nil] containsObject:[window firstResponder]]) {
         if (isVis) {
             [field selectText:self];
-        }else{
+        } else {
             [window makeFirstResponder:textView];
         }
     }

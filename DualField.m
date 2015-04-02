@@ -442,7 +442,7 @@
     }
     
     [gradient drawInBezierPath:[NSBezierPath bezierPathWithRoundedRect:blackOutlineFrame xRadius:10 yRadius:10] angle:90];
-
+    [gradient release];
     
 //	[super drawRect:rect];
 //	
@@ -452,7 +452,7 @@
 //	[NSGraphicsContext saveGraphicsState];
 //	[[NSGraphicsContext currentContext] setShouldAntialias:NO];
 //	
-	NSRect tBounds = [self bounds];
+	//NSRect tBounds = [self bounds];
 //	
 //	[[NSColor whiteColor] set];
 //	NSRectFill(NSInsetRect(tBounds, 5, 1));
@@ -500,8 +500,8 @@
 
 			//draw focus ring
 			[NSGraphicsContext saveGraphicsState];
-			NSSetFocusRingStyle(NSFocusRingTypeNone);
-			NSRect focusRect = NSInsetRect(tBounds, 0.0f, 0.5f);
+			NSSetFocusRingStyle(NSFocusRingOnly);
+			//NSRect focusRect = NSInsetRect(tBounds, 0.0f, 0.5f);
 //			focusRect.origin.y -= 0.5f;
 			//drawing could be sped up by a measurable amount if this were cached in a (partially transparent) image
             //[[NSBezierPath bezierPathWithRoundRectInRect:focusRect radius: 1.0f] fill];
